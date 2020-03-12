@@ -1,0 +1,271 @@
+/**
+* Make the field a flex-container, reverse the order so label is on top.
+*/
+.form-group {
+  position: relative;
+  margin-bottom: 18px;
+  label{
+    color:$color-primary;
+    padding-left:20px;
+    margin-bottom: 0;
+  }
+}
+.form-control{
+  border-radius: 20px;
+  background-color: transparent;
+  padding-left:20px;
+  padding-right:20px;
+  textarea{
+    // border: 0;
+    // outline: 0;
+    width: 100%;
+    // padding: 0;
+  }
+}
+.form-control:focus{
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.panigale__border_red{
+  input,select.form-control{
+    border-color:$color-danger !important;
+  }
+}
+.snapp-form-shabe{
+  position: absolute;
+  left: 14px;
+  direction: ltr;
+  bottom: 3px;
+  + input{
+    padding-left: 17px;
+  }
+}
+.snapp-form-validation{
+  color:$color-danger;
+  font-size: 12px;
+  padding-right: 12px;
+  padding-top: 2px;
+  position: absolute;
+  bottom: -20px;
+  left: 33px;
+}
+.snapp-form-flex{
+  display: flex;
+  align-items: center;
+}
+
+.snapp-animate-field {
+  margin-bottom: 20px;
+  display: flex;
+  flex-flow: column-reverse;
+  position: relative;
+  label {
+    transition: all 0.2s;
+    touch-action: manipulation;
+    font-size: 14px;
+	}
+	input {
+    transition: all 0.2s;
+    touch-action: manipulation;
+    font-size: 16px;
+  }
+  label > span.required-start{
+    color: $color-danger;
+  }
+  input:focus {
+    outline: 0;
+    border-color: $color-border-input !important;
+  }
+  input:placeholder-shown + label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+		transform: translate3d(0, 143%, 0);
+		font-size: 14px;
+  }
+
+  ::-webkit-input-placeholder,::placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+  input:focus::-webkit-input-placeholder,input:focus::placeholder {
+    opacity: 1;
+  }
+  input:not(:placeholder-shown) + label,
+  input:focus + label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
+  }
+  .snapp-password__show{
+    position: absolute;
+    top: 40px;
+    left: 25px;
+  }
+}
+
+%radio-basic {
+  height: 40px;
+  width: 100%;
+  position: relative;  
+  outline: none!important;  
+  margin-right: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.radio-modal {
+  @extend %radio-basic;
+  padding: 1px 33px 1px 20px !important;
+  margin-top: 10px;
+}
+
+.radio-wrapper {
+  @extend %radio-basic;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border: 1px solid $color-border-2;
+  border-radius: 20px;
+  background-color: #fff;
+  margin-bottom: 8px;
+  padding: 1px 40px 1px 20px !important;
+}
+
+.radio-wrapper input , .radio-modal input  {
+  position: absolute;
+  top: -25px;
+}
+.radio-wrapper .radio-face , .radio-modal .radio-face {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $color-border-input;
+  // background-color:$color-danger;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  top: 10px;
+  right: 10px;
+}
+.radio-wrapper .radio-face:after , .radio-modal .radio-face:after{
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  content: '';
+  background-color: transparent;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  top: 5px;
+  right: 5px;
+}
+.radio-wrapper .label-parent input:checked+.radio-face:after , .radio-modal .label-parent input:checked+.radio-face:after{
+  background-color: $color-white;
+}
+.basket-confirm.basket-payment .radio-wrapper .label-parent .radio-modal input:checked ~ i {
+  border: 1px solid #5f9be7;
+}
+.radio-wrapper span, .radio-modal span{
+  display: flex;
+  height: 36px;
+  line-height: 36px;
+  font-size: 12px;
+  font-weight: normal;
+  width: 100%;
+  position: relative;
+  align-items: center;
+}
+.page-payment__bank-checker img,.banks-row img {
+  height: 30px;
+  margin-right: auto;
+}
+.checkbox {
+  padding-right: 20px;
+  display: inline-block;
+}
+
+.checkbox-toggle input {
+  top: -25px;
+  position: absolute;
+}
+.checkbox-toggle {
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+.checkbox input[type="checkbox"], .checkbox input[type="radio"] {
+  opacity: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+.checkbox label {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-right: 5px !important;
+  font-size: 12px;
+  a{
+    color: $color-info !important;
+  }
+}
+
+.checkbox label:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  right: 0;
+  margin-right: -18px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+.checkbox label:after {
+  display: inline-block;
+  position: absolute;
+  width: 17px;
+  height: 17px;
+  right: 1px;
+  top: 0;
+  margin-right: -19px;
+  // padding-right: 3px;
+  // padding-top: 2px;
+  font-size: 17px;
+  line-height: 17px;
+  color: #555;
+  text-align: center;
+}
+
+.checkbox-success input[type="checkbox"]:checked+label:before,
+input[type="radio"]:checked+.radio-face{
+  background-color: $color-warning;
+  // border-color: $color-border-2;
+  // border: none;
+}
+input[type="radio"]:checked+.radio-face:after{
+  top: 5px;
+  right: 5px;
+}
+input[type="checkbox"].styled:checked+label:after, input[type="radio"].styled:checked+label:after {
+  font-family: '';
+  content: "s";
+  font-size: 12px;
+  font-weight: bold;
+  // top: -2px;
+}
+
+.checkbox-success input[type="checkbox"]:checked+label:after, .checkbox-success input[type="radio"]:checked+label:after {
+  color: #fff;
+}
+
+.snapp-login-form{
+  .btn{
+    margin-right: auto;
+  }
+}

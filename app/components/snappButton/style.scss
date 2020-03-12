@@ -1,0 +1,42 @@
+@import '../../style/sass/variable';
+@import '../../style/sass/mixin/transition';
+
+
+%button-shared {
+  font-family: IRANSans;  
+  font-weight: 300;
+  line-height: 0;
+  text-align: center;  
+}
+
+.smallButton {
+  @extend %button-shared;
+  border-radius: $border-radius;
+  padding: 12px 80px !important;
+}
+
+.bigButton {
+  @extend %button-shared;
+  border-radius: $border-radius;
+  padding: 28px 104px !important;  
+}
+
+.greenButton {
+  background: $color-success !important;
+  border-color: $color-success !important;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: darken($color: $color-success, $amount: 10%) !important;
+    border-color: $color-success !important;
+    box-shadow: none !important;
+    @include transition(all 2s);
+  }
+}
+
+
+.whiteButton {
+  background: $color-primary;
+  border-color: $color-primary;
+}

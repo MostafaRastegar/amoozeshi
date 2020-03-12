@@ -1,0 +1,43 @@
+.alert{
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 5px 13px 0 rgba(0,0,0,0.2);
+  color: $color-white;
+  border: 0;
+  padding:5px 14px;
+  min-height: 44px;
+  * {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .close{
+    top: 0;
+    bottom: 0;
+  }
+  .icon{
+    font-size: 16px;
+    margin-left: 7px;
+  }
+  &-success{
+    background-color: $color-success;
+  }
+  &-info{
+    background-color: $color-info;
+  }
+  &-danger{
+    background-color: $color-danger;
+  }
+  &-warning{
+    background-color: $color-warning;
+    color:$color-primary;
+  }
+  
+  @include xs-max {
+    .icon {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.ErrorHandlerUI {
+  margin: 20px;
+  text-align: center;
+  .inner-body {
+    padding: 50px 0 20px 0;
+  }
+  .error-title {
+    font-size: 5rem;
+    direction: ltr;
+    span {
+      color: #bdbdbd;
+    }
+  }
+  .error-body {
+    margin-top: 20px;
+  }
+  .error-links {
+    margin-top: 30px;
+    .btn{
+      max-width: none;
+      width: auto;
+      min-width: 140px;
+      text-align: center;
+    }
+  }
+}

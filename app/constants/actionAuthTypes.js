@@ -1,0 +1,8 @@
+export const USER_AUTH_CHECK = 'USER_AUTH_CHECK';
+export const SIGNIN_USER = 'SIGNIN_USER';
+export const SIGNIN_USER_INFO = 'SIGNIN_USER_INFO';
+export const UPDATE_USER = 'UPDATE_USER';
+export const SIGNOUT_USER = 'SIGNOUT_USER';
+export const SIGNUP_USER = 'SIGNUP_USER';
+export const SIGNUP_USER_RESPONSE = 'SIGNUP_USER_RESPONSE';
+export const UPDATE_USER_INFO = 'UPDATE_USER_INFO';
