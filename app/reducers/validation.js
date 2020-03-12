@@ -1,4 +1,4 @@
-import { ADD_VALIDATION, REMOVE_VALIDATION } from "constants/validations";
+import { ADD_VALIDATION, REMOVE_VALIDATION } from "../constants/Validations";
 
 export default function toasts(state = {
   userLogin:{},

@@ -1,0 +1,78 @@
+@import '../../../../style/sass/variable';
+
+$input-width: 39px;
+$input-container-height: 20px;
+$input-height: 18px;
+$handle-width: $input-height;
+$handle-height: $handle-width;
+$primary: $color-toggle;
+$secondary: $color-white;
+$tertiary: $grey-6;
+$border: 1px solid #000;
+
+.chili-animate-field {
+    label{
+        .required-start {
+            color: #929292 !important;
+        }
+    }
+}
+.register-otp__pass-box{
+    border: 1px dashed green;
+    border-radius: 14px;
+}
+    .filters__checkbox {
+        // float: right;
+        vertical-align: middle;
+        input {
+            display: none;
+        }
+        label {
+            position: relative;
+            width: $input-width;
+            right: 10px;
+            &::before,
+            &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            border-radius: $input-height;
+            border: $border;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            }
+            &::before {
+            width: $input-width;
+            height: $input-container-height;
+            border: $border;
+            background-color: $tertiary;
+            border-color: $tertiary;
+            }
+            &::after {
+            content: "";
+            width: $handle-width;
+            height: $handle-height;
+            background: $secondary;
+            border: 0;
+            top: 1px;
+            left: 1px;
+            }
+
+        }
+        input:checked + label::after {
+            left: 50%;
+        }
+        input:checked + label::before {
+            background: $primary;
+            border-color: $primary;
+        }
+        &::after {
+            content: attr(data-label);
+            padding-left: 5px;
+            padding-top: 3px;
+        }
+        input:required{
+            background: #000;
+        }
+    }
+
