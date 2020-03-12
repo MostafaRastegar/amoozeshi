@@ -7,6 +7,3 @@
     _At this point you can run `npm start` to see the example app at `http://localhost:4000`._
 5.  Run `npm build` to biuld project.
     _At this point you can run `npm start:prod` to see the production app at `http://localhost:5000`._
-
-
-Please see `https://github.com/gothinkster/node-express-realworld-example-app` for use API
