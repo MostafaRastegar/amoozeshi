@@ -3,16 +3,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { useStyles } from './style';
-import { jssRinc } from '../../style/jss/_rinc';
 import { logOutUser } from '../../actions/auth';
 import { addToast } from '../../actions/notifications';
 import { history } from '../../store';
-
+import './style.scss';
 const Header = () => {
   const [collapsed, setCollapsed] = useState(true);
   const [breadCrumb, setBreadCrumb] = useState('');
-  const { customNav, mainHeader, flex, center, headerResBg, btnTransparent } = { ...jssRinc(), ...useStyles() };
   const dispatch = useDispatch();
   const auth = useSelector(state => state.Auth);
   const location = useSelector(state => state.router.location.pathname);
@@ -58,12 +55,12 @@ const Header = () => {
 
   return (
     <React.Fragment>
-      <div className={`${headerResBg}`}>
+      <div className={`headerResBg`}>
         <div className="container">
           <Navbar color="faded" light expand="md">
             <NavbarBrand className="mr-auto text-white">Snapp Blog</NavbarBrand>
             <NavbarToggler onClick={toggleNavbar} className="mr-2" />
-            <Collapse isOpen={!collapsed} navbar className={customNav}>
+            <Collapse isOpen={!collapsed} navbar className="customNav">
               <Nav navbar>
                 <NavItem>
                   <NavLink to="/" className={"nav-link text-white"}>Home</NavLink>
@@ -73,12 +70,12 @@ const Header = () => {
                 </NavItem>
               </Nav>
               {auth.token ? <button onClick={userLoggedOut}
-                className={`btn btn-transparent text-white ${btnTransparent}`}>
+                className={`btn btn-transparent text-white btnTransparent`}>
                 Logout
                 </button> :
                 <NavLink
                   to="/authentication"
-                  className={`btn btn-transparent text-white ${btnTransparent}`}>
+                  className={`btn btn-transparent text-white btnTransparent`}>
                   Login / Register
                 </NavLink>
               }
@@ -86,8 +83,8 @@ const Header = () => {
           </Navbar>
         </div>
       </div>
-      <header className={`bg-primary text-white ${mainHeader} ${center}`}>
-        <h1 className={flex}>{breadCrumb}</h1>
+      <header className={`bg-primary text-white mainHeader center`}>
+        <h1 className="flex">{breadCrumb}</h1>
       </header>
     </React.Fragment>
   )
