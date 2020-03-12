@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-const ninjaCarouselLayout = function (props) {
+const SnappCarouselLayout = function (props) {
   useEffect(() => {
   }, []);
 
@@ -8,7 +8,7 @@ const ninjaCarouselLayout = function (props) {
     <div className={`page-carousel__layout padd20 topM20${!!props.className? ' ' + props.className:''}`}>
       {(!!props.title || !!props.moreOption) &&
         <div className="flex leftP10 bottomP10">
-          {!!props.title && 
+          {!!props.title &&
             <h2 className="text-sub-title_bold_16 bottomM">
                 {props.title}
             </h2>
@@ -30,4 +30,4 @@ const ninjaCarouselLayout = function (props) {
   )
 }
 
-export default ninjaCarouselLayout;
+export default SnappCarouselLayout;
