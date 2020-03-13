@@ -5,6 +5,7 @@ import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reac
 import { NavLink } from 'react-router-dom';
 import { logOutUser } from '../../actions/auth';
 import { addToast } from '../../actions/notifications';
+import SnappAutocomplete from '../../components/snappAutocomplete';
 import { history } from '../../store';
 import './style.scss';
 const Header = () => {
@@ -54,39 +55,38 @@ const Header = () => {
   }, [location])
 
   return (
-    <React.Fragment>
-      <div className={`headerResBg`}>
+    <header className="header-main">
+      <div className="header-main__top">
         <div className="container">
-          <Navbar color="faded" light expand="md">
-            <NavbarBrand className="mr-auto text-white">Snapp Blog</NavbarBrand>
-            <NavbarToggler onClick={toggleNavbar} className="mr-2" />
-            <Collapse isOpen={!collapsed} navbar className="customNav">
-              <Nav navbar>
-                <NavItem>
-                  <NavLink to="/" className={"nav-link text-white"}>Home</NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/kit" className={"nav-link text-white"}>Kit</NavLink>
-                </NavItem>
-              </Nav>
-              {auth.token ? <button onClick={userLoggedOut}
-                className={`btn btn-transparent text-white btnTransparent`}>
-                Logout
-                </button> :
-                <NavLink
-                  to="/authentication"
-                  className={`btn btn-transparent text-white btnTransparent`}>
-                  Login / Register
-                </NavLink>
-              }
-            </Collapse>
-          </Navbar>
+          <div className="row center">
+            <div className="col-2">
+            <div className="header-main__top-logo">
+                <i className="icon icon-profile"/>
+                <span className="rightM10">آموزش‌جو</span>
+              </div>
+            </div>
+            <div className="col-5">
+              <SnappAutocomplete/>
+            </div>
+            <div className="col-3">
+              <div className="header-main__top-education">
+                <i className="icon icon-profile"></i>
+                <span>تدریس در آموزش‌جو</span>
+              </div>
+            </div>
+            <div className="col-2">
+              <div className="header-main__top-login-register">
+                <i className="icon icon-profile"></i>
+                <span>ورود</span>
+                <span>|</span>
+                <span>ثبت‌نام</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <header className={`bg-primary text-white mainHeader center`}>
-        <h1 className="flex">{breadCrumb}</h1>
-      </header>
-    </React.Fragment>
+      <div className="header-main__bottom"></div>
+    </header>
   )
 }
 
