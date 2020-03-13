@@ -12,6 +12,7 @@ import CoursePage from '../../containers/CoursePage';
 import AuthenticationPage from '../../containers/AuthenticationPage';
 import VerifyCode from '../../containers/VerifyCodePage';
 import Register from '../../containers/RegisterPage';
+import Profile from '../../containers/ProfilePage/mainPage';
 import Page404 from '../Page404';
 import SnappLayout from '../../components/snappLayout';
 
@@ -25,6 +26,7 @@ function App() {
 				<Route exact path="/authentication" component={AuthenticationPage} />
 				<Route exact path="/verify-code" component={VerifyCode} />
 				<Route exact path="/register" component={Register} />
+				<Route exact path="/profile" component={Profile} />
 				<Route component={Page404} />
 			</Switch>
 		</SnappLayout>
