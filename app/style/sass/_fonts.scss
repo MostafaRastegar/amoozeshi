@@ -1,6 +1,20 @@
-// @font-face {
-//   font-family: test;
-//   font-style: normal;
-//   font-weight: bold;
-//   src: url('../fonts/test.ttf') format('truetype');
-// }
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: bold;
+  src: url('../fonts/iransans-fnum/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/iransans-fnum/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: IRANSans;
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/iransans-fnum/ttf/IRANSansWeb.ttf') format('truetype');
+}

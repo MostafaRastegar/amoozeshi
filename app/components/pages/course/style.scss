@@ -1,0 +1,34 @@
+@import '../../../style/sass/variable';
+.accordion__title{
+  border: 1px solid #fff;
+  background:$color-grey-220;
+  border-radius:10px 10px 0 0;
+  padding:15px 10px;
+  font-weight: normal;
+  &:hover{
+    background:$color-grey-220;
+    outline: none;
+  }
+  .icon{
+    font-family: 'icomoon' !important;
+    color:$grey-1;
+    &:before{
+      content:"\E90C";
+    }
+  }
+  &.accordion_hide{
+    background:#fff;
+    border-radius:10px;
+    .icon{
+      font-family: 'icomoon' !important;
+      color:$color-info;
+      &:before{
+        content:"\E90E";
+      }
+    }
+  }
+}
+.accordion__body{
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+}

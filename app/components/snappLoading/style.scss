@@ -1,0 +1,61 @@
+@import '../../style/sass/variable';
+
+#loader-wrapper.page-cat-load-more{
+  height: 115px;
+  background: transparent;
+  font-size: 0;
+  #loader{
+    border:5px solid #fff;
+    border-top: 5px solid $color-secondary;
+  }
+ }
+ #loader{
+  left: 0;
+  top: 0;
+  z-index: 1;
+  border: 3px solid #b2b3b0;
+  border-radius: 50%;
+  border-top: 3px solid $color-secondary;
+  width: 68px;
+  height: 68px;
+  margin: -9px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+  &-wrapper{
+    // background: #fff;
+    width: 100%;
+    height: 70vh;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    .laoder-body-text{
+      position: relative;
+      bottom: -15px;
+      min-width: 115px;
+      text-align: center;
+      left: 30px;
+    }
+  }
+  &-body{
+    width: 50px;
+    height: 50px;
+    background-size: 80%;
+    border-radius: 50%;
+    margin: 0 auto;
+    z-index: 1;
+  }
+ }
+ 
+ @-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+ }
+ 
+ @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+ }

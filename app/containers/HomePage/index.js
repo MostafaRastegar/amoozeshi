@@ -1,27 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import Loading from '../../components/snappLoading';
+import HomePage from '../../components/pages/home';
+import {mockCartItem,mockMainSlider,mockMainMenu} from '../../api/testJson/mock'
 
-const HomePage = () => {
-	const [loading, setLoading] = useState(true);
-	const [articles, setArticles] = useState([]);
 
-	useEffect(() => {
-
-	}, []);
-
-	// updating
-	useEffect(() => {
-		if (articles.length > 0) {
-			setLoading(false)
-		}
-	}, [articles]);
+const HomeIndex = () => {
+	const [loading, setLoading] = useState(false);
 
 	return (
 		<React.Fragment>
-			{!loading ?
-				<div className="row">
-					salam
-				</div> :
+      {!loading ?
+        <div>
+          <HomePage data={mockCartItem.result.data} mockMainSlider={mockMainSlider} mockMainMenu = {mockMainMenu} />
+        </div>
+        :
 				<div className="center hFull">
 					<Loading />
 				</div>
@@ -30,4 +22,4 @@ const HomePage = () => {
 	);
 }
 
-export default HomePage;
+export default HomeIndex;

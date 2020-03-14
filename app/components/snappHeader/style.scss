@@ -1,0 +1,21 @@
+.header-main {
+  &__top{
+    &-login-register,&-logo,&-education{
+      display: flex;
+      justify-content: flex-end;
+      > * {
+        margin-right: 12px;
+        cursor: pointer;
+      }
+      .icon {
+        font-size: 23px;
+      }
+    }
+    &-logo{
+      justify-content: flex-start;
+      > * {
+        margin-right:0;
+      }
+    }
+  }
+}

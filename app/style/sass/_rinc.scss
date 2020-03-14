@@ -1,3 +1,238 @@
+// .white { color: $color-white };
+// .bgWhite { background-color: $color-white };
+// .black { color: $color-black };
+// .bgBlack { background-color: $color-black };
+// .green { color: $color-success };
+// .bgGreen { background-color: $color-success };
+// .red { color: $color-danger };
+// .bgRed { background-color: $color-danger };
+// .blue { color: $color-info };
+// .bgBlue { background-color: $color-info };
+// .org { color: $color-org !important };
+// .bgOrg { background-color: $color-org !important };
+
+
+.color-primary { color: $color-primary !important };
+.bg-primary { background-color: $color-primary !important };
+.color-secondary { color: $color-secondary !important };
+.bg-secondary { background-color: $color-secondary !important };
+.color-green { color: $color-green !important };
+.bg-green { background-color: $color-green !important };
+.color-white { color: $color-white !important };
+.bg-white { background-color: $color-white !important };
+.color-black { color: $color-black !important };
+.bg-black { background-color: $color-black !important };
+.color-red { color: $color-red !important };
+.bg-red { background-color: $color-red !important };
+.color-blue { color: $color-blue !important };
+.bg-blue { background-color: $color-blue !important };
+.color-yellow { color: $color-yellow !important };
+.bg-yellow { background-color: $color-yellow !important };
+
+.color-grey-120 { color: $color-grey-120 !important };
+.bg-grey-120 { background-color: $color-grey-120 !important };
+.color-grey-160 { color: $color-grey-160 !important };
+.bg-grey-160 { background-color: $color-grey-160 !important };
+.color-grey-220 { color: $color-grey-220 !important };
+.bg-grey-220 { background-color: $color-grey-220 !important };
+.color-grey-240 { color: $color-grey-240 !important };
+.bg-grey-240 { background-color: $color-grey-240 !important };
+
+
+.red-12 {color: $red-12};
+.orange-12 { color: $orange-12 };
+.orange-13 { color: $orange-13 };
+.green-1 {color: $green-1};
+.vipBg{background-color: $orange-14};
+
+.primary { color: $color-primary };
+.primaryBg { background-color: $color-primary };
+.secondary { color: $color-secondary };
+.secondaryBg { background-color: $color-secondary };
+.success { color: $color-success };
+.successBg { background-color: $color-success };
+.tag { color: $color-tag };
+.tagBg { background-color: $color-tag };
+.info { color: $color-info };
+.infoBg { background-color: $color-info };
+.danger { color: $color-danger };
+.dangerBg { background-color: $color-danger };
+.warning { color: $color-secondary };
+.warningBg { background-color: $color-secondary }
+.yellow { color: $color-warning };
+.yellowBg { background-color: $color-yellow };
+.disable { color: $color-disable };
+.disableBg { background-color: $color-disable };
+.light { color: $color-light };
+.lightBg { background-color: $color-light };
+.highlight { color: $color-highlight };
+.highlightBg { background-color: $color-highlight };
+.gray { color: $color-text-icon };
+.restaurant-disable-button {
+  background-color: $grey-9 !important;
+  outline: none;
+  border: none;
+}
+.gray1 { color: $grey-1 };
+.gray1Bg { background-color: $grey-1 };
+.gray2 { color: $grey-2 };
+.gray2Bg { background-color: $grey-2 };
+.gray3 { color: $grey-3 };
+.gray3Bg { background-color: $grey-3 };
+.gray4 { color: $grey-4 };
+.gray4Bg { background-color: $grey-4 };
+.gray5 { color: $grey-5 };
+.gray5Bg { background-color: $grey-5 };
+.gray6 { color: $grey-6 };
+.gray6Bg { background-color: $grey-6 };
+.gray7 { color: $grey-7 };
+.gray7Bg { background-color: $grey-7 };
+.gray8 { color: $grey-8 };
+.gray8Bg { background-color: $grey-8 };
+.gray9 { color: $grey-9 };
+.gray9Bg { background-color: $grey-9 };
+.gray10 { color: $grey-10 };
+.gray10Bg { background-color: $grey-10 };
+.gray15 { color: $grey-15 }
+
+.purple5 { color: $purple-5 };
+.purple5Bg { background-color: $purple-5 };
+
+
+
+.debug { background-color: #f9d7e1 };
+.d { background-color: #C8CA2633 };
+.f { background-color: #ff00aa33 };
+
+.reset {
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+  border: none;
+  list-style: none;
+	text-decoration: none;
+}
+
+.wFull { width: 100% };
+.hFull { height: 100% };
+.whFull { width: 100%; height: 100% };
+.stretchChild { align-items: stretch };
+.bold { font-weight: bold !important };
+.bold-500 { font-weight: 500 !important };
+
+.text-title{
+  &_24{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 40px;
+  }
+  &_21{
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 34px;
+  }
+  &_18{
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 26px;
+  }
+  &_15{
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  &_14{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+  }
+}
+
+.text-sub-title{
+  &_bold_16{
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 26px;
+  }
+  &_medium_16{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+}
+
+.text-p{
+  &_15{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 24px;
+  }
+  &_14{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+  &_13{
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 18px;
+  }
+  &_12{
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 16px;
+  }
+}
+
+
+
+.text8 { font-size: 8px };
+.text10 { font-size: 10px };
+.text12 { font-size: 12px };
+.text13 { font-size: 13px };
+.text14 { font-size: 14px };
+.text15 { font-size: 15px };
+.text16 { font-size: 16px };
+.text18 { font-size: 18px };
+.text20 { font-size: 20px };
+.text21 { font-size: 21px };
+.text22 { font-size: 22px };
+.text25 { font-size: 25px };
+.text24 { font-size: 24px };
+.text28 { font-size: 28px };
+.text30 { font-size: 30px };
+.text40 { font-size: 40px };
+.text50 { font-size: 50px };
+.overLine { text-decoration: line-through };
+.underLine { text-decoration: underline };
+.rightText { text-align: right };
+.leftText { text-align: left };
+.centerText { text-align: center };
+.rtl { direction: rtl };
+.ltr { direction: ltr };
+.flex { display: flex };
+.dblock { display: block };
+.dInlineBlock { display: inline-block };
+.rRow { flex-direction: row };
+.rRowReverse { flex-direction: row-reverse };
+.rCol { flex-direction: column };
+.center { display: flex; justify-content: center; align-items: center };
+.vCenter { display: flex; justify-content: center };
+.hCenter { display: flex; align-items: center };
+.hInherit { height: inherit };
+.column { display: flex; flex-direction: column };
+.rightContent { display: flex; justify-content: flex-start };
+.leftContent { display: flex; justify-content: flex-end };
+.selfCenter { align-self: center };
+.spaceAround { justify-content: space-around };
+.spaceBetween { justify-content: space-between };
+.rightItems { align-items: flex-end };
+.leftItems { align-items: flex-start };
+.line { height: 1; background-color: #adb9c7 };
+.overhide { overflow: hidden };
+.scroll { overflow: scroll};
+.rotate90 { transform: { rotate: 90deg } };
+.flipX { transform: { scaleX: -1 } };
 .round3 { border-radius: 3px };
 .round5 { border-radius: 5px };
 .round7 { border-radius: 7px };
@@ -62,6 +297,7 @@
 .rightP3 { padding-right: 3px };
 .rightP5 { padding-right: 5px };
 .rightP10 { padding-right: 10px };
+.rightP12 { padding-right: 12px };
 .rightP15 { padding-right: 15px };
 .rightP20 { padding-right: 20px };
 .rightP30 { padding-right: 30px };
@@ -70,6 +306,7 @@
 .leftP3 { padding-left: 3px };
 .leftP5 { padding-left: 5px };
 .leftP10 { padding-left: 10px };
+.leftP12 { padding-left: 12px };
 .leftP15 { padding-left: 15px };
 .leftP20 { padding-left: 20px };
 .leftP30 { padding-left: 30px };
@@ -132,6 +369,7 @@
 .bottomM3 { margin-bottom: 3px };
 .bottomM5 { margin-bottom: 5px };
 .bottomM10 { margin-bottom: 10px };
+.bottomM15 { margin-bottom: 15px };
 .bottomM20 { margin-bottom: 20px };
 .bottomM30 { margin-bottom: 30px };
 .bottomM40 { margin-bottom: 40px };
@@ -188,6 +426,36 @@
 .boxShadow4{
   box-shadow: 0px 7px 40px rgba(0,0,0,0.25);
 }
+.boxShadow15{
+  box-shadow:  0 3px 20px 0 rgba(0, 0, 0, 0.15);
+}
+
 .none {
   display: none;
 }
+
+.borderAll{
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+}
+.borderWhite{
+  border-color:#fff !important;
+}
+.borderBlack{
+  border-color:#000 !important;
+}
+.border220{
+  border-color: $color-grey-220 !important;
+}
+
+// input[type = radio] + label {
+//   background-color: transparent;
+// }
+// input[type = radio]:checked + label {
+//   background-color: red;
+//   display: block;
+//   width: 100%;
+//   height: 100%;
+// }
+

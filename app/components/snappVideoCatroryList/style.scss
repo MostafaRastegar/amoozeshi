@@ -1,0 +1,195 @@
+@import '../../style/sass/variable';
+
+.listItem {
+	background: $color-white;
+	width: 100%;
+	min-height: 150px;
+	border-radius: 15px;
+	margin-bottom: 12px;
+	box-shadow: 0px 3px 10px #00000022;
+	font-family: $font-family-iransans;
+	position: relative;
+	&__link{
+		border-radius: 15px;
+	}
+	.star-box {
+		left: 0;
+		flex-direction: column;
+		align-items: flex-end;
+		height: 135px;
+		display: flex;
+
+		.financialLevel {
+			background: rgba(0, 0, 0, 0.7);
+			border-radius: 0 10px;
+			left:3px;
+			bottom:3px;
+		}
+	}
+
+	.restaurant-cover-small {
+		background-position: center;
+		border-top-left-radius: 15px;
+		border-bottom-left-radius: 15px;
+		border-bottom-right-radius: 15px;
+	}
+
+	.restaurant-card-cover {
+		height: 135px;
+		display: flex;
+		flex-direction: row;
+	}
+
+	.discription {
+		&__title{
+			height: 54px;
+		}
+		.imageBox {
+			width: 44px;
+			height: 44px;
+			border-radius: 50% 0 50% 50%;
+			border: 0.5px solid $color-white;
+
+		}
+
+		.discount-listpage {
+			left: -10px;
+			top: -10px;
+		}
+
+		.tagLabel {
+			height: 30px;
+			background-color: $color-danger;
+			font-weight: 100;
+			padding: 0 12px;
+			border-radius: 15px 2px 15px 15px;
+			right: -7px;
+			bottom: 0;
+			box-shadow: 0px 2px 2px #00000022;
+
+			&:before {
+				content: '';
+				width: 5px;
+				height: 7px;
+				position: absolute;
+				right: 0;
+				top: -7px;
+				border-top: 7px solid transparent;
+				border-left: 7px solid $red-10;
+			}
+		}
+
+		.left {
+			ul {
+				flex-wrap: wrap;
+
+				li {
+					color: $color-text-icon;
+					display: flex;
+					align-items: center;
+
+					&:after {
+						content: "";
+						display: block;
+						width: 6px;
+						height: 6px;
+						border-radius: 50%;
+						margin: 0 8px 0 8px;
+						background-color: $color-secondary;
+					}
+
+					&:last-child:after {
+						display: none;
+					}
+				}
+			}
+
+			.economy {
+				padding: 5px 0;
+
+				.vegeterian {
+					&:before {
+						content: "";
+						display: block;
+						width: 6px;
+						height: 6px;
+						border-radius: 50%;
+						background-color: $color-secondary;
+					}
+				}
+
+				.suggested {
+					span {
+						height: 23px;
+						line-height: 21px;
+						border-radius: 25px 10px 25px 25px;
+						background-color: $color-secondary;
+					}
+				}
+
+			}
+		}
+
+	}
+
+	.addressRate {
+		height: 35px;
+		font-weight: 100;
+
+		.reviews {
+			.graypink {
+				width: 50px;
+				height: 30px;
+			}
+
+			.new {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-end;
+
+				span {
+					height: 23px;
+					line-height: 21px;
+					border-radius: 5px;
+					background-color: $color-danger;
+
+				}
+			}
+		}
+
+	}
+
+	.video-pricing {
+		height: 40px;
+		&__new {
+			background-position: center;
+			border-radius: 11px;
+			height: 21px;
+			width:54px;
+		}
+	}
+
+	&__disable {
+		background-color: #00000066;
+		border-radius: 15px;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		overflow: hidden;
+
+		&__wrapper {
+			background-color: #00000099;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			position: absolute;
+			right: -58px;
+			bottom: -7px;
+			padding: 8px 45px;
+			transform: rotate(-45deg);
+		}
+	}
+
+}

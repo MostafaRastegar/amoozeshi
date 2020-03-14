@@ -1,0 +1,26 @@
+@import '../../style/sass/variable';
+
+.main-footer{
+  background-color: $grey-15;
+}
+.authorImageSize {
+  width: 180;
+  height:180;
+};
+.border{
+  border:'1px solid rgba(0,0,0,0.125)'
+};
+.tagsItem{
+  margin-left:'10px';
+  padding: '3px 10px';
+};
+.notification{
+  z-index: 9999;
+  position: fixed;
+  &.toast{
+    display: 'none';
+    &:last-child{
+      display: 'block'
+    }
+  }
+}
