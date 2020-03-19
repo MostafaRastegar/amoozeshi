@@ -1,68 +1,78 @@
-/**
- *
- * SnappFooter
- *
- */
 
 import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
-
-import { showModal } from '../../actions/modals';
-import { addToast } from '../../actions/notifications';
-import SnappNotification from '../../components/snappNotification';
+import sabt from '../../images/sabt.jpg';
+import enamad from '../../images/enamad.jpg';
+// import stylesheet from "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
 import './style.scss';
-const SnappFooter = (props) => {
-  const spyLogger = () => {
-    const consoleSpy = `
-		.d8888. d8b   db  .d8b.  d8888b. d8888b.      d8888b. db       .d88b.   d888b
-		88'  YP 888o  88 d8' '8b 88  '8D 88  '8D      88  '8D 88      .8P  Y8. 88' Y8b
-		'8bo.   88V8o 88 88ooo88 88oodD' 88oodD'      88oooY' 88      88    88 88
-		  'Y8b. 88 V8o88 88~~~88 88~~~   88~~~        88~~~b. 88      88    88 88  ooo
-		db   8D 88  V888 88   88 88      88           88   8D 88booo. '8b  d8' 88. ~8~
-		'8888Y' VP   V8P YP   YP 88      88           Y8888P' Y88888P  'Y88P'   Y888P
-	 `;
-    console.log(consoleSpy);
-  }
 
-
-  useEffect(() => {
-    spyLogger();
-  }, []);
-
-  return (
-    <React.Fragment>
-      <footer className={`main-footer py-5 gray0Bg`}>
-        <div className={`container flex`}>
-          <span className={`m-0 text-center text-white flex`}>Copyright &copy; Your Website 2019</span>
-          <span className={`text-center text-white leftMauto flex`}>
-            <Link to="/" className={"nav-link pt-0 text-white"}>Home</Link>
-            <Link to="/kit" className={"nav-link pt-0 text-white"}>Kit</Link>
-          </span>
+const SnappFooter = () => {
+    return(
+        <div className="footer">
+            <div className="footer-one flex">
+                <ul className="flex rightP15">
+                    <li>درباره ما</li>
+                    <li>راهنمای مدرس</li>
+                    <li>راهنمای دانشجو</li>
+                    <li>قوانین و مقررات</li>
+                    <li>حریم خصوصی</li>
+                    <li>ارتباط با ما</li>
+                </ul>
+                <div className="footer-one__left flex">
+                    <span className="center">88776655-021</span>
+                    <span className="icon-students center"></span>
+                </div>
+            </div>
+            <div className="footer-two flex">
+                <div>
+                    <div className="footer-two__text">
+                        <span>با اشتراک در خبرنامه از آخرین دوره ها و تخفیف ها با خبر شوید.</span>
+                    </div>
+                    <div className="input-footer">
+                        <div className="row input-footer__inner align-items-center">
+                            <div className="input-footer__put-email col pr-0">
+                                <input
+                                    className="footer-form form-control form-control-lg form-control-borderless"
+                                    type="text"
+                                    placeholder="ایمیل خود را وارد کنید..."
+                                    name="email"
+                                />
+                            </div>
+                            <div className="col-auto pl-0">
+                                <button className="footer-two__btn btn btn-success btn-lg">
+                                    اشتراک
+                                </button>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div className="footer-two__left flex center">
+                    <span className="icon-share"></span>
+                    <span className="icon-share"></span>
+                    <span className="icon-share"></span>   
+                </div> 
+            </div>
+            <div className="footer-three flex">
+                <div>
+                    <div className="footer-three__issue flex">
+                        <div className="issue center">
+                            <span className="icon-rectangle"></span>
+                        </div>
+                        <span className="title hcenter">آموزش‌ جو</span>
+                    </div>
+                    <p>در این قسمت درباره وب‌سایت و آموزش‌ها و خدمات و ماموریت و اهداف وب سایت <br/>متنی نوشته می شود.
+                        اینکه توسط افراد متخصص و با سابقه با رویکرد توسعه دانش و <br/>فراهم ساختن افراد متخصص برای بازار کار.
+                    </p>
+                </div>
+                <div className="left-img flex">
+                    <img src={sabt} className="left-img__sabt"/>
+                    <img src={enamad} className="left-img__enamad"/>
+                </div>
+            </div>
+            <div className="footer-four center">
+                <span>تمامی حقوق این وبسایت متعلق به شرکت دانش آنلاین پارسیان  با نام تجاری آموزش‌جو می‌باشد. | 1398 ©</span>
+            </div>
         </div>
-      </footer>
-
-      <div className={`container-fluid topM10 top notification`}>
-        <SnappNotification />
-      </div>
-    </React.Fragment>
-  );
+    )
 }
 
-
-
-const mapStateToProps = state => ({
-  notification: state.Notification,
-  auth: state.Auth,
-  location: state.router.location.pathname
-});
-const mapDispatchToProps = dispatch => ({
-  showModal: (showStatus) => {
-    dispatch(showModal(showStatus))
-  },
-  showAlert: (showStatus) => {
-    dispatch(addToast(showStatus));
-  }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(SnappFooter);
+export default SnappFooter;
