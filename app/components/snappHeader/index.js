@@ -55,12 +55,12 @@ const Header = () => {
   }, [location])
 
   return (
-    <header className="header-main">
-      <div className="header-main__top">
+    <header className="main-header">
+      <div className="main-header__top">
         <div className="container">
           <div className="row center">
             <div className="col-2">
-            <div className="header-main__top-logo">
+            <div className="main-header__top-logo">
                 <i className="icon icon-profile"/>
                 <span className="rightM10">آموزش‌جو</span>
               </div>
@@ -69,13 +69,13 @@ const Header = () => {
               <SnappAutocomplete/>
             </div>
             <div className="col-3">
-              <div className="header-main__top-education">
+              <div className="main-header__top-education">
                 <i className="icon icon-profile"></i>
                 <span>تدریس در آموزش‌جو</span>
               </div>
             </div>
             <div className="col-2">
-              <div className="header-main__top-login-register">
+              <div className="main-header__top-login-register">
                 <i className="icon icon-profile"></i>
                 <span>ورود</span>
                 <span>|</span>
@@ -85,7 +85,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="header-main__bottom"></div>
+      <div className="main-header__bottom"></div>
     </header>
   )
 }
