@@ -1,21 +1,21 @@
 export const API_URL_ROOT = process.env.APP_URL;
-const APP_BASE_CANONICAL_URL = process.env.APP_BASE_CANONICAL_URL;
+const { APP_BASE_CANONICAL_URL } = process.env;
 
 export const websiteUrl = (relativePath = '') => {
+  let newRelativePath = relativePath;
   if (relativePath === '/') {
-    relativePath = '';
+    newRelativePath = '';
   }
-
-  return APP_BASE_CANONICAL_URL + relativePath;
+  return APP_BASE_CANONICAL_URL + newRelativePath;
 };
 
-let globalHeaderObj = {
+const globalHeaderObj = {
   'Content-Type': 'application/json',
-  'X-Requested-With':'XMLHttpRequest',
-}
+  'X-Requested-With': 'XMLHttpRequest',
+};
 export const globalHeader = () => {
-  if(typeof localStorage.getItem('token') !== 'undefined'){
-    globalHeaderObj['Authorization'] = 'Token ' + localStorage.getItem('token');
+  if (typeof localStorage.getItem('token') !== 'undefined') {
+    globalHeaderObj.Authorization = `Token ${localStorage.getItem('token')}`;
     return globalHeaderObj;
   }
   return globalHeaderObj;

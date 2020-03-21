@@ -1,27 +1,26 @@
-import React, { Component } from "react";
+import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import SnappAlert from '../../snappAlert';
 
-class Toast extends Component {
-  componentDidMount(){
-    const alertTimer = (this.props.delay === "")?2000:this.props.delay
-    setTimeout((alertTimer) => {
-      this.props.onDismissClick();
+const Toast = props => {
+  const { delay, onDismissClick, text, color } = props;
+  useEffect(() => {
+    const alertTimer = delay === '' ? 2000 : delay;
+    setTimeout(() => {
+      onDismissClick();
     }, alertTimer);
-  }
-  render() {
-    return (
-      <li className="toast">
-        <SnappAlert
-          type={this.props.color}
-        >
-          {this.props.text}
-        </SnappAlert>
-      </li>
-    );
-  }
+  }, []);
 
-  shouldComponentUpdate() {
-    return false;
-  }
-}
+  return (
+    <li className="toast">
+      <SnappAlert type={color}>{text}</SnappAlert>
+    </li>
+  );
+};
+Toast.propTypes = {
+  delay: PropTypes.number,
+  onDismissClick: PropTypes.func,
+  text: PropTypes.string,
+  color: PropTypes.string,
+};
 export default Toast;

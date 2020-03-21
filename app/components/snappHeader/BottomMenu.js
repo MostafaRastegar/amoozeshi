@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { connect } from "react-redux";
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
 import {
   Collapse,
@@ -20,53 +21,78 @@ const HeaderMenu = props => {
   const [mainMenu] = useState(messages.bottomMenu);
   const [pathName, setPathName] = useState(pathname);
 
-  useEffect(() => {
-    setPathName(pathname);
-  }, [pathname]);
+  useEffect(
+    () => {
+      setPathName(pathname);
+    },
+    [pathname],
+  );
 
   return (
     <div>
       <Navbar light expand="xs">
         <Collapse isOpen={isOpen} navbar>
           <Nav navbar>
-
             <span className="nav-link-logo">
-              <img src={``} alt="tik8" />
+              <img src="" alt="tik8" />
             </span>
 
             <NavItem>
-              <NavLink className={"nav-link" + (pathName === "/" ? " active-link" : "")} to='/'>صفحه اصلی</NavLink>
+              <NavLink
+                className={`nav-link${pathName === '/' ? ' active-link' : ''}`}
+                to="/"
+              >
+                صفحه اصلی
+              </NavLink>
             </NavItem>
-            {mainMenu.map((item, index) =>
-              <NavItem key={index} className={(index + 2) >= 4 ? "d-none d-lg-block" : ""}>
-                <NavLink className="nav-link" activeClassName="active-link" to={'/category/' + item.slug + '/'}>{item.title}</NavLink>
+            {mainMenu.map((item, index) => (
+              <NavItem
+                key={item.slug}
+                className={index + 2 >= 4 ? 'd-none d-lg-block' : ''}
+              >
+                <NavLink
+                  className="nav-link"
+                  activeClassName="active-link"
+                  to={`/category/${item.slug}/`}
+                >
+                  {item.title}
+                </NavLink>
               </NavItem>
-            )}
-            <UncontrolledDropdown className="d-lg-none panigale__header_bottom-more-menu" nav inNavbar>
+            ))}
+            <UncontrolledDropdown
+              className="d-lg-none panigale__header_bottom-more-menu"
+              nav
+              inNavbar
+            >
               <DropdownToggle nav caret>
                 بیشتر
-                </DropdownToggle>
+              </DropdownToggle>
               <DropdownMenu right>
-                {
-                  mainMenu.map((item, index) =>
-                    <React.Fragment key={index}>
-                      {(index + 2) >= 4 &&
-                        <NavLink className="nav-link" to={'/category/' + item.slug + '/'}>{item.title}</NavLink>
-                      }
-                    </React.Fragment>
-                  )
-                }
+                {mainMenu.map((item, index) => (
+                  <React.Fragment key={item.slug}>
+                    {index + 2 >= 4 && (
+                      <NavLink
+                        className="nav-link"
+                        to={`/category/${item.slug}/`}
+                      >
+                        {item.title}
+                      </NavLink>
+                    )}
+                  </React.Fragment>
+                ))}
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
         </Collapse>
       </Navbar>
-
     </div>
   );
-}
+};
 
 const mapStateToProps = state => ({
-  pathname: state.router.location.pathname
+  pathname: state.router.location.pathname,
 });
+HeaderMenu.propTypes = {
+  pathname: PropTypes.string,
+};
 export default connect(mapStateToProps)(HeaderMenu);
