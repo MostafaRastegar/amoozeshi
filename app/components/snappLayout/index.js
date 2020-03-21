@@ -1,25 +1,28 @@
 import React from 'react';
-import SnappFooter from '../../components/snappFooter';
-import SnappHeader from '../../components/snappHeader';
+import PropTypes from 'prop-types';
+import SnappFooter from '../snappFooter';
+import SnappHeader from '../snappHeader';
 import GlobalStyle from '../../global-styles';
 
-const Layout = (props) => {
+const Layout = props => {
+  const { children } = props;
   return (
-    <React.Fragment>
+    <>
       <SnappHeader />
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <div className='my-4'>
-              {props.children}
-            </div>
+            <div className="my-4">{children}</div>
           </div>
         </div>
       </div>
       <SnappFooter />
       <GlobalStyle />
-    </React.Fragment>
-  )
-}
+    </>
+  );
+};
 
+Layout.propTypes = {
+  children: PropTypes.node,
+};
 export default Layout;

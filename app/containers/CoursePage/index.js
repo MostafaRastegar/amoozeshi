@@ -2,23 +2,22 @@ import React, { useState } from 'react';
 import Loading from '../../components/snappLoading';
 import CoursePage from '../../components/pages/course';
 
-
 const CourseIndex = () => {
-	const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
 
-	return (
-		<React.Fragment>
-      {!loading ?
+  return (
+    <>
+      {!loading ? (
         <div>
-          <CoursePage/>
+          <CoursePage />
         </div>
-        :
-				<div className="center hFull">
-					<Loading />
-				</div>
-			}
-		</React.Fragment>
-	);
-}
+      ) : (
+        <div className="center hFull">
+          <Loading />
+        </div>
+      )}
+    </>
+  );
+};
 
 export default CourseIndex;

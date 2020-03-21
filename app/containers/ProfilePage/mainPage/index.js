@@ -2,23 +2,22 @@ import React, { useState } from 'react';
 import Loading from '../../../components/snappLoading';
 import ProfilePage from '../../../components/pages/profile/main';
 
-
 const ProfileIndex = () => {
-	const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
 
-	return (
-		<React.Fragment>
-      {!loading ?
+  return (
+    <>
+      {!loading ? (
         <div>
-          <ProfilePage/>
+          <ProfilePage />
         </div>
-        :
-				<div className="center hFull">
-					<Loading />
-				</div>
-			}
-		</React.Fragment>
-	);
-}
+      ) : (
+        <div className="center hFull">
+          <Loading />
+        </div>
+      )}
+    </>
+  );
+};
 
 export default ProfileIndex;

@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable react/prop-types */
 /**
  *
  * SnappForm
@@ -12,7 +15,7 @@ const AnimateField = props => {
     <div
       className={`snapp-animate-field form-group ${
         classes.className ? classes.className : ''
-        }${!classes.validation ? '' : ' panigale__border_red'}`}
+      }${!classes.validation ? '' : ' panigale__border_red'}`}
     >
       {classes.validation && (
         <div className="snapp-form-validation">{classes.validation[0]}</div>
@@ -52,7 +55,7 @@ const AnimateFieldSheba = props => {
     <div
       className={`snapp-animate-field form-group ${
         classes.className ? classes.className : ''
-        }${!classes.validation ? '' : ' panigale__border_red'}`}
+      }${!classes.validation ? '' : ' panigale__border_red'}`}
     >
       {classes.validation && (
         <div className="snapp-form-validation">{classes.validation[0]}</div>
@@ -92,7 +95,7 @@ const CheckBox = props => {
     <div
       className={`checkbox checkbox-success checkbox-toggle topP5 ${
         classes.className ? classes.className : ''
-        }`}
+      }`}
     >
       <input
         type={classes.type}
@@ -101,7 +104,7 @@ const CheckBox = props => {
         checked={classes.checked}
         className={`styled ${
           classes.inputClassName ? classes.inputClassName : ''
-          }`}
+        }`}
         defaultChecked={classes.defaultChecked}
         onChange={classes.onChange}
         onKeyPress={classes.onKeyPress}
@@ -120,7 +123,7 @@ const RadioButton = props => {
     <div
       className={`radiobuttion radiobutton-success radiobutton-toggle topP5 ${
         classes.className ? classes.className : ''
-        }`}
+      }`}
     >
       <input
         type={classes.type}
@@ -129,7 +132,7 @@ const RadioButton = props => {
         checked={classes.checked}
         className={`styled ${
           classes.inputClassName ? classes.inputClassName : ''
-          }`}
+        }`}
         defaultChecked={classes.defaultChecked}
         onChange={classes.onChange}
         onKeyPress={classes.onKeyPress}
@@ -141,7 +144,6 @@ const RadioButton = props => {
     </div>
   );
 };
-
 
 class AnimateFieldPassword extends React.Component {
   constructor(props) {
@@ -155,28 +157,30 @@ class AnimateFieldPassword extends React.Component {
   showHide(e) {
     e.preventDefault();
     e.stopPropagation();
+    const { type } = this.state;
     // this.state.type === 'input'
     //   ? () => this.setState({ type: 'ppassword' })
     //   : () => this.setState({ type: 'input' });
     this.setState({
-      type: this.state.type === 'input' ? 'password' : 'input',
+      type: type === 'input' ? 'password' : 'input',
     });
   }
 
   render() {
     const classes = this.props;
+    const { type } = this.state;
     return (
       <div
         className={`snapp-animate-field form-group ${
           classes.className ? classes.className : ''
-          }${!classes.validation ? '' : ' panigale__border_red'}`}
+        }${!classes.validation ? '' : ' panigale__border_red'}`}
       >
         {classes.validation && (
           <div className="snapp-form-validation">{classes.validation[0]}</div>
         )}
         <input
           className="form-control"
-          type={this.state.type}
+          type={type}
           name={classes.name}
           id={classes.name}
           value={classes.value}
@@ -189,7 +193,7 @@ class AnimateFieldPassword extends React.Component {
           {!!classes.required && <span className="required-start">*</span>}
         </label>
         <span className="snapp-password__show" onClick={this.showHide}>
-          {this.state.type === 'input' ? 'مخفی' : 'نمایش'}
+          {type === 'input' ? 'مخفی' : 'نمایش'}
         </span>
       </div>
     );

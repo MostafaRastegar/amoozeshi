@@ -22,7 +22,7 @@ import {
   FORGET_PASSWORD,
   GOOGLE_LOGIN,
   WEB_ENGAGE_LOGIN,
-  EDIT_MOBILE
+  EDIT_MOBILE,
 } from '../constants/actionAuthTypes';
 
 export const getUser = user => ({
