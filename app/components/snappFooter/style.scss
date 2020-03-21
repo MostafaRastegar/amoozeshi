@@ -1,40 +1,39 @@
 @import '../../style/sass/variable';
-.footer{
+.main-footer{
   width: auto;
   height: 100%;
-  .footer-one{
-    color: #787878;
-    border-top: 1px solid #dcdcdc;
+  .footer-section-one{
+    color: $grey-1;
+    border-top: 1px solid $color-grey-220;
     height: 64px;
-    background-color: #ffffff;
+    background-color: white;
     ul{
       padding: 21px 100px 21px 0;
       li{
-        color: #787878;
+        color: $grey-1;
         font-size: 14px;
         padding-left: 49px;
         &::marker{
-          color:#1ed764;
-          border-color: #1ed764;
+          color: $color-secondary;
+          border-color: $color-secondary;
         }
       }
     }
-    .footer-one__left{
+    .footer-one__section-left{
       margin-right: auto;
       .icon-students{
         font-size: 26px;
-        color: #1ed764;
+        color: $color-secondary;
         margin-left: 99px;
         margin-right: 10px;
       }
     }
   }
-  .footer-two{
-    border-top: 1px solid #dcdcdc;
+  .footer-section-two{
     height: 130px;
-    background-color: #f0f0f0;
+    background-color: $color-grey-240;
     .footer-two__text{
-      color: #787878;
+      color: $grey-1;
       margin: 26px 110px 9px 0;
     }
     .input-footer {
@@ -45,8 +44,8 @@
       margin-right: 100px;
       &__inner{
         height: 42px;
-        border: 1px solid #dcdcdc;
-        background-color: #FFFFFF;
+        border: 1px solid $color-grey-220;
+        background-color: white;
         padding: 0 3px;
         border-radius: 25px;
         position: relative;
@@ -65,8 +64,8 @@
         width: 100px;
         height: 32px;
         border-radius: 20px;
-        background-color: #1ed764;
-        color: #fff;
+        background-color: $color-secondary;
+        color: $color-white;
         font-size: 14px;
         padding-bottom: 0;
         display: block;
@@ -82,51 +81,51 @@
         border: 1px solid transparent;
         padding: 10px;
         font-size: 14px;
-        color: #a0a0a0;
+        color: $grey-6;
         &[type=text] {
           // background-color: #f1f1f1;
           width: 100%;
-          color: #787878;
+          color: $grey-1;
         }
       }
     }
-    .footer-two__left{
+    .footer-two__section-left{
       margin-right: auto;
       margin-left: 99px;
       .icon-share{
         font-size: 26px;
-        color: #1ed764;
+        color: $color-secondary;
       }
     }
   }
-  .footer-three{
+  .footer-section-three{
     height: 218px;
-    background-color: #ffffff;
-    .footer-three__issue{
+    background-color:white;
+    .footer-section-three__issue{
       padding: 35px 100px 18px;
       .issue{
         margin-left: 15px;
         width: 38px;
         height: 39px;
         border-radius: 5px;
-        border: solid 2px #f0f0f0;
+        border: solid 2px $color-grey-240;
         .icon-rectangle{
           width: 22px;
           height: 23px;
           border-radius: 2px;
-          background-color: #55555f;
+          background-color: $grey-8;
           position: absolute;
         }
       }
       .title{
         font-size: 19px;
         font-weight: bold;
-        color: #1ed764;
+        color: $color-secondary;
       }
     }
     p{
       text-align: right;
-      color: #787878;
+      color: $grey-1;
       padding-right: 100px;
       font-size: 14px;
     }
@@ -146,10 +145,10 @@
       }
     }
   }
-  .footer-four{
+  .footer-section-four{
     height: 29px;
-    background-color: #282337;
-    color: #cdcdcd;
+    background-color: $color-primary;
+    color: $grey-4;
   }
 }
 

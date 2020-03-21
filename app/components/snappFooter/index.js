@@ -6,8 +6,8 @@ import './style.scss';
 
 const SnappFooter = () => {
     return(
-        <div className="footer">
-            <div className="footer-one flex">
+        <footer className="main-footer">
+            <div className="footer-section-one flex">
                 <ul className="flex rightP15">
                     <li>درباره ما</li>
                     <li>راهنمای مدرس</li>
@@ -16,12 +16,12 @@ const SnappFooter = () => {
                     <li>حریم خصوصی</li>
                     <li>ارتباط با ما</li>
                 </ul>
-                <div className="footer-one__left flex">
+                <div className="footer-one__section-left flex">
                     <span className="center">88776655-021</span>
                     <span className="icon-students center"></span>
                 </div>
             </div>
-            <div className="footer-two flex">
+            <div className="footer-section-two flex">
                 <div>
                     <div className="footer-two__text">
                         <span>با اشتراک در خبرنامه از آخرین دوره ها و تخفیف ها با خبر شوید.</span>
@@ -44,15 +44,15 @@ const SnappFooter = () => {
                         </div>
                     </div>   
                 </div>
-                <div className="footer-two__left flex center">
+                <div className="footer-two__section-left flex center">
                     <span className="icon-share"></span>
                     <span className="icon-share"></span>
                     <span className="icon-share"></span>   
                 </div> 
             </div>
-            <div className="footer-three flex">
+            <div className="footer-section-three flex">
                 <div>
-                    <div className="footer-three__issue flex">
+                    <div className="footer-section-three__issue flex">
                         <div className="issue center">
                             <span className="icon-rectangle"></span>
                         </div>
@@ -67,10 +67,10 @@ const SnappFooter = () => {
                     <img src={enamad} className="left-img__enamad"/>
                 </div>
             </div>
-            <div className="footer-four center">
+            <div className="footer-section-four center">
                 <span>تمامی حقوق این وبسایت متعلق به شرکت دانش آنلاین پارسیان  با نام تجاری آموزش‌جو می‌باشد. | 1398 ©</span>
             </div>
-        </div>
+        </footer>
     )
 }
 
