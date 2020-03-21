@@ -171,7 +171,7 @@ class PanigalSuggestionSearch extends Component {
                   />
               </div>
               <div className="col-auto pl-0">
-                  <button className="btn btn-danger btn-lg" onClick={this.querySubmit}>
+                  <button className="btn btn-success btn-lg" onClick={this.querySubmit}>
                       <i className="icon icon-profile"></i>
                   </button>
               </div>
