@@ -1,25 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Loading from '../../components/snappLoading';
 import HomePage from '../../components/pages/home';
-import {mockCartItem,mockMainSlider,mockMainMenu} from '../../api/testJson/mock'
-
+import {
+  mockCartItem,
+  mockMainSlider,
+  mockMainMenu,
+} from '../../api/testJson/mock';
 
 const HomeIndex = () => {
-	const [loading, setLoading] = useState(false);
+  const [loading] = useState(false);
 
-	return (
-		<React.Fragment>
-      {!loading ?
+  return (
+    <>
+      {!loading ? (
         <div>
-          <HomePage data={mockCartItem.result.data} mockMainSlider={mockMainSlider} mockMainMenu = {mockMainMenu} />
+          <HomePage
+            data={mockCartItem.result.data}
+            mockMainSlider={mockMainSlider}
+            mockMainMenu={mockMainMenu}
+          />
         </div>
-        :
-				<div className="center hFull">
-					<Loading />
-				</div>
-			}
-		</React.Fragment>
-	);
-}
+      ) : (
+        <div className="center hFull">
+          <Loading />
+        </div>
+      )}
+    </>
+  );
+};
 
 export default HomeIndex;

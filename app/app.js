@@ -33,7 +33,7 @@ const store = configureStore;
 
 const MOUNT_NODE = document.getElementById('app');
 
-const render = messages => {
+const render = () => {
   ReactDOM.render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
@@ -74,36 +74,26 @@ if (!window.Intl) {
   render(translationMessages);
 }
 
-
 // Install ServiceWorker and AppCache in the end since
 // it's not most important operation and if main code fails,
 // we do not want it installed
 if (process.env.NODE_ENV === 'production') {
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      
-      caches.keys().then(function(keyList) {
-        for(let i = 0 ; i < keyList.length;i++){
-          if(keyList[i].match("webpack-offline")!=null){
-            caches.delete(keyList[i]).then(function() {
-              console.log(keyList[i]);
-            });
-          }
-        }
-      });
-
-      navigator.serviceWorker.register('/service-worker.js').then(registration => {
-        // console.log('SW registered: ', registration);
-        registration.pushManager.subscribe({userVisibleOnly: true});
-
-      }).catch(registrationError => {
-        console.log('SW registration failed: ', registrationError);
-      });
-      navigator.serviceWorker.ready.then(function(reg) {
-        Notification.requestPermission(function(status) {
-            console.log('Notification permission status:', status);
+      navigator.serviceWorker
+        .register('/service-worker.js')
+        .then(registration => {
+          // console.log('SW registered: ', registration);
+          registration.pushManager.subscribe({ userVisibleOnly: true });
+        })
+        .catch(registrationError => {
+          console.log('SW registration failed: ', registrationError);
         });
-    });
+      navigator.serviceWorker.ready.then(function() {
+        Notification.requestPermission(function(status) {
+          console.log('Notification permission status:', status);
+        });
+      });
     });
   }
 }

@@ -1,10 +1,5 @@
-import {
-  CLOSE_MODAL,
-  OPEN_MODAL,
-  SHOW_MODAL
-} from 'constants/actionModals';
+import { CLOSE_MODAL, OPEN_MODAL, SHOW_MODAL } from 'constants/actionModals';
 // import modals from '../reducers/Modals';
-
 
 export const closeModal = modals => ({
   type: CLOSE_MODAL,

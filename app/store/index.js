@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
 // import thunk from 'redux-thunk';
@@ -31,7 +31,7 @@ const routeMiddleware = routerMiddleware(history);
 const sagaMiddleware = createSagaMiddleware();
 const logger = createLogger({
   // ...options
-      level : 'warn', // console's level 'log' | 'console' | 'warn' | 'error' |
+  level: 'warn', // console's level 'log' | 'console' | 'warn' | 'error' |
 });
 let middlewares = [sagaMiddleware, routeMiddleware];
 if (process.env.NODE_ENV === 'development') {
@@ -51,6 +51,7 @@ sagaMiddleware.run(rootSaga);
 if (module.hot) {
   // Enable Webpack hot module replacement for reducers
   module.hot.accept('../reducers/index', () => {
+    // eslint-disable-next-line global-require
     const nextRootReducer = require('../reducers/index');
     configureStore.replaceReducer(nextRootReducer);
   });
