@@ -1,5 +1,9 @@
-.header-main {
+@import '../../style/sass/variable';
+.main-header {
   &__top{
+    height:80px;
+    background-color: $color-primary;
+    color: white;
     &-login-register,&-logo,&-education{
       display: flex;
       justify-content: flex-end;
@@ -18,4 +22,16 @@
       }
     }
   }
+  &__bottom {
+    border-bottom: 1px solid $color-grey-220;
+    &-inner {
+      height: 51px;
+      align-items: center;
+      justify-items: center;
+    };
+    .nav-link-logo {
+      margin-left: 15px;
+      display: none;
+    };
+  };
 }

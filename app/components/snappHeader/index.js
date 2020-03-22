@@ -1,94 +1,93 @@
 import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
-import { logOutUser } from '../../actions/auth';
-import { addToast } from '../../actions/notifications';
-import SnappAutocomplete from '../../components/snappAutocomplete';
-import { history } from '../../store';
+import { Container, Row, Col, Navbar, NavbarBrand } from 'reactstrap';
+import BottomMenu from './BottomMenu';
+import SnappAutocomplete from '../snappAutocomplete';
+import messages from './messages';
+
 import './style.scss';
+
 const Header = () => {
-  const [collapsed, setCollapsed] = useState(true);
-  const [breadCrumb, setBreadCrumb] = useState('');
-  const dispatch = useDispatch();
-  const auth = useSelector(state => state.Auth);
+  const [, setBreadCrumb] = useState('');
   const location = useSelector(state => state.router.location.pathname);
-  const toggleNavbar = () => setCollapsed(!collapsed);
-  const userLoggedOut = () => {
-    dispatch(logOutUser({}));
-    dispatch(addToast({
-      text: 'You have successfully logged out',
-      color: 'success',
-      delay: 3000,
-    }))
-    history.push('/');
-  };
   const pageTitle = () => {
     const splitLocation = location.split('/');
-    splitLocation.forEach((item) => {
+    splitLocation.forEach(item => {
+      // eslint-disable-next-line default-case
       switch (item) {
-        case ('article'):
+        case 'article':
           setBreadCrumb('Blog');
           break;
-        case ('authentication'):
+        case 'authentication':
           setBreadCrumb('Authentication');
           document.title = 'Authentication';
           break;
-        case ('tags'):
+        case 'tags':
           setBreadCrumb('Tags');
           document.title = 'Tags';
           break;
-        case ('kit'):
+        case 'kit':
           setBreadCrumb('kit');
           document.title = 'Kit';
           break;
       }
     });
-    if (location == "/") {
+    if (location === '/') {
       setBreadCrumb('Home');
       document.title = 'Snapp Blog';
     }
-  }
-  useEffect(() => {
-    pageTitle()
-  }, [location])
+  };
+  useEffect(
+    () => {
+      pageTitle();
+    },
+    [location],
+  );
 
   return (
-    <header className="header-main">
-      <div className="header-main__top">
+    <header className="main-header">
+      <div className="main-header__top center">
         <div className="container">
           <div className="row center">
             <div className="col-2">
-            <div className="header-main__top-logo">
-                <i className="icon icon-profile"/>
-                <span className="rightM10">آموزش‌جو</span>
+              <div className="main-header__top-logo">
+                <i className="icon icon-profile" />
+                <span className="rightM10">{messages.headerTop.logo}</span>
               </div>
             </div>
             <div className="col-5">
-              <SnappAutocomplete/>
+              <SnappAutocomplete />
             </div>
             <div className="col-3">
-              <div className="header-main__top-education">
-                <i className="icon icon-profile"></i>
-                <span>تدریس در آموزش‌جو</span>
+              <div className="main-header__top-education">
+                <i className="icon icon-teacher" />
+                <span>{messages.headerTop.education}</span>
               </div>
             </div>
             <div className="col-2">
-              <div className="header-main__top-login-register">
-                <i className="icon icon-profile"></i>
-                <span>ورود</span>
+              <div className="main-header__top-login-register">
+                <i className="icon icon-profile" />
+                <span>{messages.headerTop.login}</span>
                 <span>|</span>
-                <span>ثبت‌نام</span>
+                <span>{messages.headerTop.register}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="header-main__bottom"></div>
+      <div className="main-header__bottom">
+        <Container>
+          <Row className="main-header__bottom-inner">
+            <Col>
+              <BottomMenu />
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </header>
-  )
-}
+  );
+};
 
 Navbar.propTypes = {
   light: PropTypes.bool,
@@ -97,12 +96,12 @@ Navbar.propTypes = {
   color: PropTypes.string,
   role: PropTypes.string,
   expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   // pass in custom element to use
-}
+};
 NavbarBrand.propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string])
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   // pass in custom element to use
-}
+};
 
 export default Header;

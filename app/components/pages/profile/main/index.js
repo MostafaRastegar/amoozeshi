@@ -1,43 +1,42 @@
 import React, { useEffect } from 'react';
-import ProfileMenu from './profileMenu'; //import a component from another file
+import ProfileMenu from './profileMenu'; // import a component from another file
 import Loading from '../../../snappLoading';
 import './style.scss';
 
-function PageProfile(props) {
+function PageProfile() {
   const loading = false;
   const auth = {
     fullname: 'mostafa',
     email: 'm.rastegar@gmail.com',
-    mobileNumber: '09358537536'
-  }
+    mobileNumber: '09358537536',
+  };
   useEffect(() => {
     // if (typeof props.auth.id === "undefined") {
     //   history.push("/");
     // }
-  }, [])
+  }, []);
 
   const userLogOutClick = () => {
     console.log('====================================');
     console.log('logout');
     console.log('====================================');
-  }
+  };
 
   return (
-    <React.Fragment>
-      {!loading ?
-        <div className={`page-profile`}>
-          <div className={`profile-home relative profile-home__vip-not`}>
+    <>
+      {!loading ? (
+        <div className="page-profile">
+          <div className="profile-home relative profile-home__vip-not">
             {
-            //   <div className="profile-background flex relative cover center bottomP20">
-            //   <span className="profile-background__text text22">پروفایل</span>
-            //   <div className="profile-background__icon"/>
-            // </div>
-          }
+              //   <div className="profile-background flex relative cover center bottomP20">
+              //   <span className="profile-background__text text22">پروفایل</span>
+              //   <div className="profile-background__icon"/>
+              // </div>
+            }
 
             <div className="profile-user bg-primary color-white topP20">
               <div className="profile">
-
-                <div className={`profile__image center`}>
+                <div className="profile__image center">
                   <span className="icon chilivery-user"> </span>
                 </div>
 
@@ -60,31 +59,27 @@ function PageProfile(props) {
                   </div>
                 </div>
                 <div className="profile__character flex rRow wFull center">
-                  <button className="btn btn-success center">
-                    <span className="icon-circle-pluse leftP10"/>
+                  <button type="button" className="btn btn-success center">
+                    <span className="icon-circle-pluse leftP10" />
                     <span>ایجاد دوره آموزشی</span>
                   </button>
                 </div>
-
               </div>
-
             </div>
-
           </div>
 
-
-          <div className={`profile-menu-detail bgWhite`}>
+          <div className="profile-menu-detail bgWhite">
             <div className="profile-menu__item">
-              <ProfileMenu userLogOut={()=>userLogOutClick()}/>
+              <ProfileMenu userLogOut={() => userLogOutClick()} />
             </div>
           </div>
-
-        </div> :
+        </div>
+      ) : (
         <div className="center">
           <Loading />
         </div>
-      }
-    </React.Fragment>
+      )}
+    </>
   );
 }
 export default PageProfile;

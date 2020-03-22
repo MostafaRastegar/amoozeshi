@@ -1,10 +1,7 @@
-import {
-  CLOSE_MODAL,
-  OPEN_MODAL,
-  SHOW_MODAL
-} from '../constants/actionModals';
-import { logOutGet } from '../api/account';
-import React,{useRef} from 'react';
+/* eslint-disable no-case-declarations */
+// import React, { useRef } from 'react';
+import { CLOSE_MODAL, OPEN_MODAL, SHOW_MODAL } from '../constants/actionModals';
+// import { logOutGet } from '../api/account';
 
 const initialModals = {
   RestaurantPageModal: false,
@@ -16,46 +13,45 @@ const initialModals = {
   verifyModal: false,
 };
 
-function usePrevious(value) {
-	const ref = useRef();
-	useEffect(() => {
-		ref.current = value;
-	});
-	return ref.current;
-}
+// const usePrevious = value => {
+//   const ref = useRef();
+//   useEffect(() => {
+//     ref.current = value;
+//   });
+//   return ref.current;
+// };
 
 let winYclone = 0;
 let myVar;
 const modals = (state = initialModals, action) => {
-	switch (action.type) {
-		
-		case CLOSE_MODAL:
-		return Object.assign({}, state, action.payload);
-		case OPEN_MODAL:
-		return Object.assign({}, state, action.payload);
-		case SHOW_MODAL:
-					let winY = window.scrollY;
-					let body = document.body;
-					// const mainPageBody = document.querySelector(".heightFix").nextSibling;
-					const mainPageBody = body;
-					if(Object.values(action.payload)[0] === true){
-						myVar = setTimeout(() => {
-							winYclone = winY;
-							mainPageBody.style.top = `-${winYclone}px`;
-							mainPageBody.style.left = 0;
-							mainPageBody.style.right = 0;
-							mainPageBody.style.position = 'fixed';
-						}, 1000);
-						return Object.assign({}, state, action.payload);
-					}else{
-						clearTimeout(myVar);
-						mainPageBody.removeAttribute('style');
-						window.scrollTo(0,winYclone);
-						return Object.assign({}, state, action.payload);
-					}
-      default:
-          return state;
+  switch (action.type) {
+    case CLOSE_MODAL:
+      return { ...state, ...action.payload };
+    case OPEN_MODAL:
+      return { ...state, ...action.payload };
+    case SHOW_MODAL:
+      const winY = window.scrollY;
+      const { body } = document;
+      // const mainPageBody = document.querySelector(".heightFix").nextSibling;
+      const mainPageBody = body;
+      if (Object.values(action.payload)[0] === true) {
+        myVar = setTimeout(() => {
+          winYclone = winY;
+          mainPageBody.style.top = `-${winYclone}px`;
+          mainPageBody.style.left = 0;
+          mainPageBody.style.right = 0;
+          mainPageBody.style.position = 'fixed';
+        }, 1000);
+        return { ...state, ...action.payload };
+      }
+      clearTimeout(myVar);
+      mainPageBody.removeAttribute('style');
+      window.scrollTo(0, winYclone);
+      return { ...state, ...action.payload };
+
+    default:
+      return state;
   }
-}
+};
 
 export default modals;

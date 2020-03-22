@@ -1,4 +1,7 @@
-import { ADD_NOTIFICATION, REMOVE_NOTIFICATION } from "../constants/notifications";
+import {
+  ADD_NOTIFICATION,
+  REMOVE_NOTIFICATION,
+} from '../constants/notifications';
 
 export default function toasts(state = [], action) {
   const { payload, type } = action;

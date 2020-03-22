@@ -4,7 +4,7 @@ import {
   OTP_VERIFY,
   OTP_SIGNUP,
   SIGNIN_USER_OTP_VERIFY,
-  OTP_FULL_DATA
+  OTP_FULL_DATA,
 } from '../constants/actionOtpTypes';
 
 export const getUserOtp = user => ({

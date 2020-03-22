@@ -1,1 +1,1 @@
-export const CHANGE_ROUTER = "CHANGE_ROUTER";
+export const CHANGE_ROUTER = 'CHANGE_ROUTER';

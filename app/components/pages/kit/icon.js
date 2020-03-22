@@ -10,152 +10,149 @@ import React from 'react';
 /* eslint-disable react/prefer-stateless-function */
 export class Icon extends React.Component {
   render() {
-
     return (
       <div className="clearfix mhl ptl">
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-arrow-down"></span>
+            <span className="icon-arrow-down" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-arrow-left"></span>
+            <span className="icon-arrow-left" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-arrow-right"></span>
+            <span className="icon-arrow-right" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-arrow-up"></span>
+            <span className="icon-arrow-up" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-basket"></span>
+            <span className="icon-basket" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-bookmark"></span>
+            <span className="icon-bookmark" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-bookmark-add"></span>
+            <span className="icon-bookmark-add" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-bookmark-add-fill"></span>
+            <span className="icon-bookmark-add-fill" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-bookmarks"></span>
+            <span className="icon-bookmarks" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-bookmarks-fill"></span>
+            <span className="icon-bookmarks-fill" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-calendar"></span>
+            <span className="icon-calendar" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-circle-chake"></span>
+            <span className="icon-circle-chake" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-circle-minus"></span>
+            <span className="icon-circle-minus" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-circle-play"></span>
+            <span className="icon-circle-play" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-circle-pluse"></span>
+            <span className="icon-circle-pluse" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-microscope"></span>
+            <span className="icon-microscope" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-movie_time"></span>
+            <span className="icon-movie_time" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-my-course"></span>
+            <span className="icon-my-course" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-profile"></span>
+            <span className="icon-profile" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-questions"></span>
+            <span className="icon-questions" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-search-cat"></span>
+            <span className="icon-search-cat" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-share"></span>
+            <span className="icon-share" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-star-fill"></span>
+            <span className="icon-star-fill" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-star-stroke"></span>
+            <span className="icon-star-stroke" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-students"></span>
+            <span className="icon-students" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-teacher"></span>
+            <span className="icon-teacher" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-time"></span>
+            <span className="icon-time" />
           </div>
         </div>
         <div className="glyph fs1">
           <div className="clearfix bshadow0 pbs">
-            <span className="icon-warning"></span>
+            <span className="icon-warning" />
           </div>
         </div>
       </div>
-
-
     );
   }
 }

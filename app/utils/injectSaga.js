@@ -1,3 +1,5 @@
+/* eslint-disable react/no-deprecated */
+/* eslint-disable react/static-property-placement */
 import React from 'react';
 import PropTypes from 'prop-types';
 import hoistNonReactStatics from 'hoist-non-react-statics';
@@ -39,6 +41,7 @@ export default ({ key, saga, mode }) => WrappedComponent => {
       ejectSaga(key);
     }
 
+    // eslint-disable-next-line react/destructuring-assignment
     injectors = getInjectors(this.context.store);
 
     render() {
