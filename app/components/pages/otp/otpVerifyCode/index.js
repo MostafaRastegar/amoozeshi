@@ -33,7 +33,7 @@ function VerifyCode(
       return (
         <div>
           <p>
-            <b>۰۰:۰۰</b>
+            <b className="gray1">۰۰:۰۰</b>
           </p>
           {resetComp(props)}
         </div>
@@ -42,7 +42,7 @@ function VerifyCode(
     return (
       <div>
         <p>
-          <b>
+          <b className="gray1">
             {minutes}:{seconds}
           </b>
         </p>
@@ -64,58 +64,56 @@ function VerifyCode(
   );
 
   return (
-    <>
-      <SnappAuthLayout title="تایید شماره موبایل">
-        <div className="activationCode__edit__wrapper topM10 center">
-          <div className="midText text-center activationCode__edit gray15">
-            <span>09358537536</span>
-            <Link to="/authentication/" className="rightMauto">
-              ویرایش
-            </Link>
-          </div>
+    <SnappAuthLayout title="تایید شماره موبایل">
+      <div className="activationCode__edit__wrapper topM10 center">
+        <div className="midText text-center activationCode__edit gray15">
+          <span>09358537536</span>
+          <Link to="/authentication/" className="rightMauto">
+            ویرایش
+          </Link>
         </div>
-        <h4 className="text12 text-center topM60 gray15">
-          کدی را که پیامک می‌شود، در قسمت زیر وارد کنید:
-        </h4>
-        <div className="activationCode__form">
-          <Container className="text-center">
-            <Row>
-              <div className="center padd15 col-12 ltr">
-                <OtpInput
-                  inputStyle={{
-                    width: '50px',
-                    height: '50px',
-                    borderRadius: '12px',
-                    border: 'solid 1px #c8c8c8',
-                    backgroundColor: '#ffffff',
-                    margin: '0 5px',
-                  }}
-                  focusStyle={{ outline: 'none' }}
-                  onChange={otp => {
-                    setOtpCode(otp);
-                    if (otp.length === props.otp.otp_length) {
-                      setTimeout(() => {
-                        const inputFocus = document.querySelector(
-                          '.activationCode__form .btn-success',
-                        );
-                        inputFocus.click();
-                        inputFocus.focus();
-                      }, 1000);
-                    }
-                  }}
-                  value={otpCode}
-                  numInputs={5}
-                  // separator={<span>-</span>}
-                />
-              </div>
-            </Row>
+      </div>
+      <h4 className="text12 text-center topM60 gray1">
+        کدی را که پیامک می‌شود، در قسمت زیر وارد کنید:
+      </h4>
+      <div className="activationCode__form">
+        <Container className="text-center">
+          <Row>
+            <div className="center padd15 col-12 ltr gray1">
+              <OtpInput
+                inputStyle={{
+                  width: '50px',
+                  height: '50px',
+                  borderRadius: '12px',
+                  border: 'solid 1px #c8c8c8',
+                  backgroundColor: '#ffffff',
+                  margin: '0 5px',
+                }}
+                focusStyle={{ outline: 'none' }}
+                onChange={otp => {
+                  setOtpCode(otp);
+                  if (otp.length === props.otp.otp_length) {
+                    setTimeout(() => {
+                      const inputFocus = document.querySelector(
+                        '.activationCode__form .btn-success',
+                      );
+                      inputFocus.click();
+                      inputFocus.focus();
+                    }, 1000);
+                  }
+                }}
+                value={otpCode}
+                numInputs={5}
+                // separator={<span>-</span>}
+              />
+            </div>
+          </Row>
 
-            <p className="midText mt-5">زمان باقیمانده ارسال پیامک</p>
-            <Countdown date={date} renderer={renderer} key={keyss} />
-          </Container>
-        </div>
-      </SnappAuthLayout>
-    </>
+          <p className="midText mt-5 gray1">زمان باقیمانده ارسال پیامک</p>
+          <Countdown date={date} renderer={renderer} key={keyss} />
+        </Container>
+      </div>
+    </SnappAuthLayout>
   );
 }
 

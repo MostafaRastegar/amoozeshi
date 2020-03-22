@@ -4,6 +4,10 @@
     height:80px;
     background-color: $color-primary;
     color: white;
+    a{
+      color: white;
+      text-decoration: none;
+    }
     &-login-register,&-logo,&-education{
       display: flex;
       justify-content: flex-end;

@@ -1,6 +1,14 @@
+@import '../../../../style/sass/variable';
 .activationCode__edit{
+  &__wrapper{
+    width:100%;
+    max-width: 220px;
+  }
   border-bottom: 1px solid #ccc;
-  width: 180px;
+  width: 100%;
   display: flex;
   padding: 8px 0;
+  a{
+    color: $color-info
+  }
 }

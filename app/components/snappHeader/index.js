@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Navbar, NavbarBrand } from 'reactstrap';
 import BottomMenu from './BottomMenu';
@@ -68,9 +69,9 @@ const Header = () => {
             <div className="col-2">
               <div className="main-header__top-login-register">
                 <i className="icon icon-profile" />
-                <span>{messages.headerTop.login}</span>
+                <Link to="/authentication/">{messages.headerTop.login}</Link>
                 <span>|</span>
-                <span>{messages.headerTop.register}</span>
+                <Link to="/register/">{messages.headerTop.register}</Link>
               </div>
             </div>
           </div>
