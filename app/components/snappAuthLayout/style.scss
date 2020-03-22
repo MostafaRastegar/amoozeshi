@@ -1,11 +1,26 @@
-.header__simple{
-  .icon-bar{
-    width:80px;
-    height:80px;
-    border:5px solid #fff;
+.auth {
+  &__layout {
+    background: white;
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 574px;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-top:65px;
+    margin-bottom:65px;
+    > div{
+      border-radius: 15px;
+    }
+  }
+}
+
+.header__simple {
+  .icon-bar {
+    width: 70px;
+    height: 70px;
     margin-top: -35px;
     position: relative;
     z-index: 10;
-    margin-bottom:10px;
+    margin-bottom: 10px;
   }
 }
