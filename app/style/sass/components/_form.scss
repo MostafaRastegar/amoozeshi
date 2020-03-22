@@ -5,16 +5,21 @@
   position: relative;
   margin-bottom: 18px;
   label{
-    color:$color-primary;
-    padding-left:20px;
+    color: $grey-1;
+    padding-right:20px;
     margin-bottom: 0;
   }
 }
 .form-control{
-  border-radius: 20px;
   background-color: transparent;
   padding-left:20px;
   padding-right:20px;
+  width:100%;
+  height: 50px;
+  border-radius: 12px;
+  border: solid 1px #cdcdcd;
+  background-color: #ffffff;
+  color: $grey-1;
   textarea{
     // border: 0;
     // outline: 0;
@@ -60,6 +65,9 @@
   display: flex;
   flex-flow: column-reverse;
   position: relative;
+  max-width: 325px;
+  width:100%;
+  margin:0 auto;
   label {
     transition: all 0.2s;
     touch-action: manipulation;
@@ -68,7 +76,7 @@
 	input {
     transition: all 0.2s;
     touch-action: manipulation;
-    font-size: 16px;
+    font-size: 15px;
   }
   label > span.required-start{
     color: $color-danger;
@@ -84,8 +92,8 @@
     overflow: hidden;
     text-overflow: ellipsis;
     transform-origin: left bottom;
-		transform: translate3d(0, 143%, 0);
-		font-size: 14px;
+		transform: translate3d(0, 160%, 0);
+    font-size: 14px;
   }
 
   ::-webkit-input-placeholder,::placeholder {
@@ -98,6 +106,9 @@
   input:not(:placeholder-shown) + label,
   input:focus + label {
     transform: translate(0, 0) scale(1);
+    padding-right: 0;
+    position: relative;
+    top: -10px;
     cursor: pointer;
   }
   .snapp-password__show{
@@ -110,8 +121,8 @@
 %radio-basic {
   height: 40px;
   width: 100%;
-  position: relative;  
-  outline: none!important;  
+  position: relative;
+  outline: none!important;
   margin-right: 0;
   overflow: hidden;
   cursor: pointer;
