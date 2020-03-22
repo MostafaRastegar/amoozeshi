@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 // import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
-import { signUpSubmit, useFormInput } from './util';
-import { AnimateField } from '../../../snappForm';
+import { signUpSubmit, useFormInput } from '../util';
+import { AnimateField } from '../../../../snappForm';
 // import { otpPermission } from '../util';
-import SnappAuthLayout from '../../../snappAuthLayout';
+import SnappAuthLayout from '../../../../snappAuthLayout';
 
 // import 'react-accessible-accordion/dist/fancy-example.css';
-import './style.scss';
+import '../style.scss';
 
 const OtpRegister = ({
   initIschecked = false,
@@ -90,7 +90,7 @@ const OtpRegister = ({
           />
         )}
 
-        <div className="mt-4 text-center">
+        <div className="text-center">
           <span className="ruleAndCondition midText">
             با کلیک بر روی دکمه ثبت نام شما
             <span className="ruleAndCondition__link">
@@ -103,9 +103,9 @@ const OtpRegister = ({
             را پذیرفته اید
           </span>
         </div>
-        <div className="topM20 wFull hP20 center bottomM20">
-          <SubmitComp />
-        </div>
+      </div>
+      <div className="topM20 wFull hP20 center bottomM20">
+        <SubmitComp />
       </div>
     </SnappAuthLayout>
   );

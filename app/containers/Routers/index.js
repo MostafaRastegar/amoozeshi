@@ -11,6 +11,7 @@ import Kit from '../Kit';
 import CoursePage from '../CoursePage';
 import AuthenticationPage from '../AuthenticationPage';
 import VerifyCode from '../VerifyCodePage';
+import RegisterStudent from '../RegisterPage/RegisterStudentPage';
 import Register from '../RegisterPage';
 import Profile from '../ProfilePage/mainPage';
 import Page404 from '../Page404';
@@ -26,6 +27,7 @@ function App() {
         <Route exact path="/authentication" component={AuthenticationPage} />
         <Route exact path="/verify-code" component={VerifyCode} />
         <Route exact path="/register" component={Register} />
+        <Route exact path="/register-student" component={RegisterStudent} />
         <Route exact path="/profile" component={Profile} />
         <Route component={Page404} />
       </Switch>
