@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Loading from '../../../components/snappLoading';
-import ProfilePage from '../../../components/pages/profile/main';
+import ProfileEdit from '../../../components/pages/profile/edit';
 
 const ProfileIndex = () => {
   const [loading] = useState(false);
@@ -9,7 +9,7 @@ const ProfileIndex = () => {
     <>
       {!loading ? (
         <div>
-          <ProfilePage />
+          <ProfileEdit />
         </div>
       ) : (
         <div className="center hFull">

@@ -7,27 +7,27 @@ const messages = {
   },
   bottomMenu: [
     {
-      slug: 'kit',
+      slug: 'kit1',
       title: 'گرافیک',
     },
     {
-      slug: 'kit',
+      slug: 'kit2',
       title: 'برنامه نویسی',
     },
     {
-      slug: 'kit',
+      slug: 'kit3',
       title: 'برنامه نویسی',
     },
     {
-      slug: 'kit',
+      slug: 'kit4',
       title: 'برنامه نویسی',
     },
     {
-      slug: 'kit',
+      slug: 'kit5',
       title: 'برنامه نویسی',
     },
     {
-      slug: 'kit',
+      slug: 'kit6',
       title: 'برنامه نویسی',
     },
   ],

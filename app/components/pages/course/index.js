@@ -81,8 +81,8 @@ const Course = () => {
           </SnappCourseLayout>
 
           <SnappCourseLayout title="آموزش‌های این دوره" className="boxShadow15">
-            <Accordion className="chili-more-menu__item-wrapper">
-              <AccordionItem className="chili-more-menu__item">
+            <Accordion className="page-profile__sidebar-menu__item-wrapper">
+              <AccordionItem className="page-profile__sidebar-menu__item">
                 <AccordionItemTitle
                   className="accordion__title round10 borderAll border220"
                   hideBodyClassName="accordion_hide"
