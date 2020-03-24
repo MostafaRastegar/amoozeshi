@@ -4,6 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.scss';
 import { rateColor } from '../GeneralFunctions';
+// import sharejs from '../../images/share-javascript-basics.png';
 // const calcTime = data => {
 //   const time = data.time || 0;
 //   const unit = data.unit || 'دقیقه';
@@ -26,6 +27,8 @@ function ninjaVideoCatroryList(props) {
           className="cover coverSmall restaurant-cover-small relative"
           style={{ backgroundImage: `url('${props.coverSmall}')` }}
         >
+          {/* <div className="cover coverSmall restaurant-cover-small relative">
+          <img src={sharejs} alt="" /> */}
           <div className="restaurant-card-cover" />
           <div className="discription">
             <div className="absolute top right">
