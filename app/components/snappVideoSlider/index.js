@@ -94,10 +94,7 @@ const ninjaVedeoSlider = props => {
   return (
     <div className="panigale-carousel">
       {!!props.showMoreLink && (
-        <div
-          className="flex leftP10 bottomP10"
-          style={{ borderBottom: '1px solid #dcdcdc' }}
-        >
+        <div className="flex leftP10 bottomP10 border220Bottom">
           <h2 className="text-title_18 bottomM">
             <Link
               className={!props.showMoreLink ? 'disabled-link' : ''}
