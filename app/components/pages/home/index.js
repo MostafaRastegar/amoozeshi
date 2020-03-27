@@ -40,7 +40,7 @@ const HomePage = props => {
     <>
       {!loading ? (
         <div className="home">
-          <div className="main-slider topP15 bottomP15 bg-grey-240">
+          <div className="main-slider topP5 bottomP15 bg-grey-240">
             <div className="container">
               <div className="row">
                 <div className="col-12">

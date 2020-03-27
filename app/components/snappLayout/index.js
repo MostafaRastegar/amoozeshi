@@ -9,13 +9,7 @@ const Layout = props => {
   return (
     <>
       <SnappHeader />
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="my-4">{children}</div>
-          </div>
-        </div>
-      </div>
+      <main>{children}</main>
       <SnappFooter />
       <GlobalStyle />
     </>
