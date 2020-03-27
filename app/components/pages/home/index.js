@@ -16,7 +16,17 @@ const slider2 = {
   loop: false,
   dots: false,
   adaptive: true,
-  sliderTitle: 'آموزش',
+  sliderTitle: 'جدیدترین دوره‌ها',
+  showMoreLink: 'home',
+  multi: true,
+  type: 'multiCard',
+  itemSize: '240px',
+};
+const slider3 = {
+  loop: false,
+  dots: false,
+  adaptive: true,
+  sliderTitle: 'محبوب‌ترین دوره‌ها',
   showMoreLink: 'home',
   multi: true,
   type: 'multiCard',
@@ -30,7 +40,7 @@ const HomePage = props => {
     <>
       {!loading ? (
         <div className="home">
-          <div className="main-slider topP15 bottomP15 bg-grey-240">
+          <div className="main-slider topP5 bottomP15 bg-grey-240">
             <div className="container">
               <div className="row">
                 <div className="col-12">
@@ -44,9 +54,19 @@ const HomePage = props => {
             </div>
           </div>
           <div className="container">
+            <div className="center topM50 bottomM50">
+              <span className="color-secondary bold text28">
+                آموزش آنلاین در وب سایت آموزش‌جو
+              </span>
+            </div>
             <div className="row topM20">
-              <div className="col-12 leftP">
+              <div className="col-12 leftP bottomP50">
                 <SnappVideoSlider {...slider2} uniName="slider2" data={data} />
+              </div>
+            </div>
+            <div className="row topM20">
+              <div className="col-12 leftP bottomP70">
+                <SnappVideoSlider {...slider3} uniName="slider3" data={data} />
               </div>
             </div>
           </div>

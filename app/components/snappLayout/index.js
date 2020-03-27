@@ -9,13 +9,7 @@ const Layout = props => {
   return (
     <div className="bg-grey-160">
       <SnappHeader />
-      <main className="main-body container">
-        <div className="row">
-          <div className="col-12">
-            <div className="my-4">{children}</div>
-          </div>
-        </div>
-      </main>
+      <main className="main-body">{children}</main>
       <SnappFooter />
       <GlobalStyle />
     </div>
