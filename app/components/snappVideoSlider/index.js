@@ -9,6 +9,7 @@ import React, { useEffect } from 'react';
 import $ from 'jquery';
 import Link from './myLink';
 import SnappVideoCatroryList from '../snappVideoCatroryList';
+import uiux from '../../images/uiux.jpg';
 
 import 'owl.carousel/dist/assets/owl.carousel.css';
 if (typeof window !== 'undefined') {
@@ -62,7 +63,7 @@ const ninjaVedeoSlider = props => {
             className={!props.showMoreLink ? 'disabled-link' : ''}
             route={props.showMoreLink ? props.showMoreLink : '/'}
           >
-            <img src={params.profile} />
+            <img src={uiux} />
           </Link>
         );
       case 'multiCard':
@@ -94,7 +95,7 @@ const ninjaVedeoSlider = props => {
   return (
     <div className="panigale-carousel">
       {!!props.showMoreLink && (
-        <div className="flex leftP10 bottomP10">
+        <div className="flex leftP10 bottomP10 border220Bottom">
           <h2 className="text-title_18 bottomM">
             <Link
               className={!props.showMoreLink ? 'disabled-link' : ''}
@@ -109,14 +110,14 @@ const ninjaVedeoSlider = props => {
               className="text14 color-blue rightMauto"
             >
               <span>
-                نمایش همه
+                مشاهده همه
                 <i className="icon icon-left-arrow" />
               </span>
             </Link>
           )}
         </div>
       )}
-      <div className="ltr-plugin">
+      <div className="ltr-plugin topP30">
         <div id={`${props.uniName}`} className="owl-carousel owl-theme">
           {snappVedioSliderItem}
         </div>
