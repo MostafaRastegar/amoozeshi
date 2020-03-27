@@ -30,7 +30,7 @@ function App() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/register-student" component={RegisterStudent} />
         <Route exact path="/register-teacher" component={RegisterTeacher} />
-        <Route exact path="/profile/edit" component={ProfileEdit} />
+        <Route exact path="/profile/edit/:slug" component={ProfileEdit} />
         <Route component={Page404} />
       </Switch>
     </SnappLayout>

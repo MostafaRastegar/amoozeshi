@@ -6,7 +6,7 @@ import { signUpSubmit, useFormInput } from './util';
 import { AnimateField } from '../../../snappForm';
 import './style.scss';
 
-const PageProfile = ({
+const PageProfileEditTeacher = ({
   initIschecked = false,
   initSignUpFullname = '',
   initSignUpUserEmail = '',
@@ -40,16 +40,6 @@ const PageProfile = ({
             <AnimateField
               className="col-12"
               placeholder=" "
-              name="signUpPhone"
-              value="09358537536"
-              type="text"
-              label="شماره موبایل"
-              icon="chilivery-online-pay-help"
-              disabled
-            />
-            <AnimateField
-              className="col-12"
-              placeholder=" "
               name="signUpFullname"
               value={signUpFullname.value}
               type="text"
@@ -74,6 +64,34 @@ const PageProfile = ({
             <AnimateField
               className="col-12"
               placeholder=" "
+              name="signUpPhone"
+              value="09358537536"
+              type="text"
+              label="شماره موبایل"
+              icon="chilivery-online-pay-help"
+              disabled
+            />
+            <AnimateField
+              className="col-12"
+              placeholder=" "
+              name="signUpPhone"
+              value="کد ملی"
+              type="text"
+              label=""
+              disabled
+            />
+            <AnimateField
+              className="col-12"
+              placeholder=" "
+              name="signUpPhone"
+              value="تصویر کارت ملی"
+              type="text"
+              label=""
+              disabled
+            />
+            <AnimateField
+              className="col-12"
+              placeholder=" "
               name="signUpUserEmail"
               value={signUpUserEmail.value}
               type="text"
@@ -91,8 +109,44 @@ const PageProfile = ({
               type="text"
               onChange=""
               onKeyPress={onKeyPress}
+              label="شماره شبا (جهت واریز حق تدریس)"
+              placeholder="IR75220********"
+              icon="chilivery-user"
+              required
+            />
+            <AnimateField
+              className="col-12"
+              name="signUpResume"
+              value=""
+              type="text"
+              onChange=""
+              onKeyPress={onKeyPress}
+              label="آخرین مدرک و رشته تحصیلی"
+              placeholder="مثلا کارشناسی نرم‌افزار کامپیوتر"
+              icon="chilivery-user"
+              required
+            />
+            <AnimateField
+              className="col-12"
+              name="signUpResume"
+              value=""
+              type="text"
+              onChange=""
+              onKeyPress={onKeyPress}
+              label="سوابق حرفه‌ای"
+              placeholder="توضیحات مربوط به سوابق و توانمندی‌ها"
+              icon="chilivery-user"
+              required
+            />
+            <AnimateField
+              className="col-12"
+              name="signUpResume"
+              value=""
+              type="text"
+              onChange=""
+              onKeyPress={onKeyPress}
               label="لینک رزومه (اختیاری)"
-              placeholder="مثلا آدرس صفحه linkedin"
+              placeholder="فایل رزومه خود را ضمیمه کنید"
               icon="chilivery-user"
               required
             />
@@ -108,33 +162,18 @@ const PageProfile = ({
               icon="chilivery-user"
               required
             />
-            {isChecked && (
-              <AnimateField
-                className="col-12"
-                placeholder=" "
-                name="signUpPass"
-                onChange={signUpPass.onChange}
-                value={signUpPass.value}
-                type="password"
-                label="رمزعبور"
-                // icon="chilivery-pass"
-                onKeyPress={onKeyPress}
-              />
-            )}
-
-            <div className="text-center">
-              <span className="ruleAndCondition midText">
-                با کلیک بر روی دکمه ثبت نام شما
-                <span className="ruleAndCondition__link">
-                  <span className="accordion__list-text">
-                    {'\u00A0'}
-                    قوانین سایت
-                    {'\u00A0'}
-                  </span>
-                </span>
-                را پذیرفته اید
-              </span>
-            </div>
+            <AnimateField
+              className="col-12"
+              name="signUpResume"
+              value=""
+              type="text"
+              onChange=""
+              onKeyPress={onKeyPress}
+              label="لینک‌(های) صفحه پروفایل شخصی"
+              placeholder="linkedin/babak.haghighi"
+              icon="chilivery-user"
+              required
+            />
           </div>
           <div className="topM20 wFull hP20 center bottomM20">
             <SubmitComp />
@@ -149,10 +188,10 @@ const PageProfile = ({
   );
 };
 
-PageProfile.propTypes = {
+PageProfileEditTeacher.propTypes = {
   initIschecked: PropTypes.bool,
   initSignUpFullname: PropTypes.string,
   initSignUpUserEmail: PropTypes.string,
   initSignUpPass: PropTypes.string,
 };
-export default PageProfile;
+export default PageProfileEditTeacher;

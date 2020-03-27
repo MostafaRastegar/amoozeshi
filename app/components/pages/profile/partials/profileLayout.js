@@ -7,9 +7,9 @@ import './style.scss';
 const ProfileLayout = props => {
   const { children, history } = props;
   return (
-    <main className="page-homeless page-profile page-small">
+    <div className="page-homeless page-profile page-small topP30">
       <section className="partition wFull">
-        <Container fluid>
+        <Container>
           <Row className="page-profile card_white">
             <Col xs={4}>
               <div className="page-profile__sidebar">
@@ -22,7 +22,7 @@ const ProfileLayout = props => {
           </Row>
         </Container>
       </section>
-    </main>
+    </div>
   );
 };
 
