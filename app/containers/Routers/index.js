@@ -14,7 +14,7 @@ import VerifyCode from '../VerifyCodePage';
 import RegisterStudent from '../RegisterPage/RegisterStudentPage';
 import RegisterTeacher from '../RegisterPage/RegisterTeacherPage';
 import Register from '../RegisterPage';
-import Profile from '../ProfilePage/mainPage';
+import ProfileEdit from '../ProfilePage/edit';
 import Page404 from '../Page404';
 import SnappLayout from '../../components/snappLayout';
 
@@ -30,7 +30,7 @@ function App() {
         <Route exact path="/register" component={Register} />
         <Route exact path="/register-student" component={RegisterStudent} />
         <Route exact path="/register-teacher" component={RegisterTeacher} />
-        <Route exact path="/profile" component={Profile} />
+        <Route exact path="/profile/edit/:slug" component={ProfileEdit} />
         <Route component={Page404} />
       </Switch>
     </SnappLayout>

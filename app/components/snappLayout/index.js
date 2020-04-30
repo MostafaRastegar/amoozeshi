@@ -7,18 +7,12 @@ import GlobalStyle from '../../global-styles';
 const Layout = props => {
   const { children } = props;
   return (
-    <>
+    <div className="bg-grey-160">
       <SnappHeader />
-      <div className="container">
-        <div className="row">
-          <div className="col-12">
-            <div className="my-4">{children}</div>
-          </div>
-        </div>
-      </div>
+      <main className="main-body">{children}</main>
       <SnappFooter />
       <GlobalStyle />
-    </>
+    </div>
   );
 };
 

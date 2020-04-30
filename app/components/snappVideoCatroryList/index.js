@@ -27,8 +27,6 @@ function ninjaVideoCatroryList(props) {
           className="cover coverSmall restaurant-cover-small relative"
           style={{ backgroundImage: `url('${props.coverSmall}')` }}
         >
-          {/* <div className="cover coverSmall restaurant-cover-small relative">
-          <img src={sharejs} alt="" /> */}
           <div className="restaurant-card-cover" />
           <div className="discription">
             <div className="absolute top right">
