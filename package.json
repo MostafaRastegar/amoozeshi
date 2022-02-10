@@ -68,7 +68,7 @@
     "lodash": "^4.17.11",
     "minimist": "1.2.3",
     "moment": "^2.24.0",
-    "node-sass": "^4.11.0",
+    "node-sass": "^7.0.0",
     "owl.carousel": "^2.3.4",
     "prop-types": "15.6.2",
     "rc-switch": "^1.9.0",
